@@ -17,6 +17,7 @@ M.config = {
     transparent = false,
     dimInactive = false,
     terminalColors = true,
+    disableItalics = false,
     colors = { theme = { zen = {}, pearl = {}, ink = {}, all = {} }, palette = {} },
     ---@type fun(colors: KansoColorsSpec): table<string, table>
     overrides = function()

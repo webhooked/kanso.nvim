@@ -25,6 +25,10 @@ function M.setup(colors, config)
         GitSignsAdd                          = { fg = theme.vcs.added, bg = theme.ui.none },
         GitSignsChange                       = { fg = theme.vcs.changed, bg = theme.ui.none },
         GitSignsDelete                       = { fg = theme.vcs.removed, bg = theme.ui.none },
+        GitSignsChangedelete                 = { fg = theme.vcs.removed, bg = theme.ui.none },
+        GitSignsTopdelete                    = { fg = theme.vcs.removed, bg = theme.ui.none },
+        GitSignsUntracked                    = { fg = theme.vcs.untracked, bg = theme.ui.none },
+
         -- Neogit
         NeogitDiffContextHighlight           = { bg = theme.diff.change }, --[[  guibg=#333333 guifg=#b2b2b2 ]]
         NeogitHunkHeader                     = { fg = theme.syn.fun }, --[[  guifg=#cccccc guibg=#404040 ]]

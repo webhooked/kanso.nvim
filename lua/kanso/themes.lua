@@ -41,6 +41,7 @@ local c = require("kanso.lib.color")
 ---@field added ColorSpec
 ---@field removed ColorSpec
 ---@field changed ColorSpec
+---@field untracked ColorSpec
 
 ---@class UiElements
 ---@field none ColorSpec
@@ -175,9 +176,10 @@ return {
                 text   = palette.winterYellow,
             },
             vcs = {
-                added   = palette.autumnGreen,
-                removed = palette.autumnRed,
-                changed = palette.autumnYellow,
+                added     = palette.autumnGreen,
+                removed   = palette.autumnRed,
+                changed   = palette.autumnYellow,
+                untracked = palette.inkGray2
             },
             term = {
                 palette.zen0,          -- black
@@ -284,9 +286,10 @@ return {
                 text   = palette.winterYellow,
             },
             vcs = {
-                added   = palette.autumnGreen,
-                removed = palette.autumnRed,
-                changed = palette.autumnYellow,
+                added     = palette.autumnGreen,
+                removed   = palette.autumnRed,
+                changed   = palette.autumnYellow,
+                untracked = palette.inkGray2
             },
             term = {
                 palette.inkBlack0,     -- black
@@ -379,9 +382,10 @@ return {
                 special3   = palette.pearlViolet4,
             },
             vcs = {
-                added   = palette.pearlGreen2,
-                removed = palette.pearlRed2,
-                changed = palette.pearlYellow3,
+                added     = palette.pearlGreen2,
+                removed   = palette.pearlRed2,
+                changed   = palette.pearlYellow3,
+                untracked = palette.pearlGray4
             },
             diff = {
                 add    = palette.pearlGreen3,

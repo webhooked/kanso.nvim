@@ -67,12 +67,12 @@ local palette = {
     inkGray2 = "#75797f",
     inkGray3 = "#5C6066",
     inkBlue2 = "#8ba4b0",
-    inkViolet= "#8992a7",
+    inkViolet = "#8992a7",
     inkRed = "#c4746e",
     inkAqua = "#8ea4a2",
-    inkAsh = "#5C6068",
-    inkTeal = "#949fb5", 
-    inkYellow = "#c4b28a",--"#a99c8b",
+    inkAsh = "#5C6066",
+    inkTeal = "#949fb5",
+    inkYellow = "#c4b28a", --"#a99c8b",
     -- "#8a9aa3",
 
     pearlInk0 = "#24262D",
@@ -101,7 +101,7 @@ local palette = {
     pearlPink = "#b35b79",
     pearlOrange = "#cc6d00",
     pearlOrange2 = "#e98a00",
-    pearlYellow ="#77713f",
+    pearlYellow = "#77713f",
     pearlYellow2 = "#836f4a",
     pearlYellow3 = "#de9800",
     pearlYellow4 = "#f9d791",
@@ -132,7 +132,8 @@ function M.setup(opts)
     local theme = opts.theme or require("kanso")._CURRENT_THEME -- WARN: this fails if called before kanso.load()
 
     if not theme then
-        error("kanso.colors.setup(): Unable to infer `theme`. Either specify a theme or call this function after ':colorscheme kanso'")
+        error(
+        "kanso.colors.setup(): Unable to infer `theme`. Either specify a theme or call this function after ':colorscheme kanso'")
     end
 
     -- Add to and/or override palette_colors
@@ -142,7 +143,8 @@ function M.setup(opts)
     local theme_colors = require("kanso.themes")[theme](updated_palette_colors)
 
     -- Add to and/or override theme_colors
-    local theme_overrides = vim.tbl_deep_extend("force", override_colors.theme["all"] or {}, override_colors.theme[theme] or {} )
+    local theme_overrides = vim.tbl_deep_extend("force", override_colors.theme["all"] or {},
+        override_colors.theme[theme] or {})
     local updated_theme_colors = vim.tbl_deep_extend("force", theme_colors, theme_overrides)
     -- return palette_colors AND theme_colors
 

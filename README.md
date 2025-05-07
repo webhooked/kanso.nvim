@@ -210,7 +210,7 @@ require('kanso').setup({
             },
             all = {
                 ui = {
-                    bg_gutter = "none"
+                    cursor_line_nr_active_foreground = "#C4746E"
                 }
             }
         }

@@ -46,9 +46,9 @@ function M.setup(colors, config)
         -- Folded		Line used for closed folds.
         Folded = { fg = theme.ui.special, bg = theme.ui.bg_p1 },
         -- FoldColumn	'foldcolumn'
-        FoldColumn = { fg = theme.ui.nontext, bg = theme.ui.bg_gutter },
+        FoldColumn = { fg = theme.ui.nontext, bg = theme.ui.none },
         -- SignColumn	Column where |signs| are displayed.
-        SignColumn = { fg = theme.ui.special, bg = theme.ui.bg_gutter },
+        SignColumn = { fg = theme.ui.special, bg = theme.ui.none },
         -- IncSearch	'incsearch' highlighting; also used for the text replaced with ":s///c".
         IncSearch = { fg = theme.ui.fg_reverse, bg = theme.diag.warning },
         -- Substitute	|:substitute| replacement text highlighting.
@@ -66,7 +66,7 @@ function M.setup(colors, config)
         -- ModeMsg		'showmode' message (e.g., "-- INSERT --").
         ModeMsg = { fg = theme.diag.warning, bold = true },
         -- MsgArea		Area for messages and cmdline.
-        MsgArea = vim.o.cmdheight == 0 and {link = 'StatusLine'} or { fg = theme.ui.fg_dim },
+        MsgArea = vim.o.cmdheight == 0 and { link = 'StatusLine' } or { fg = theme.ui.fg_dim },
         -- MsgSeparator	Separator for scrolled messages |msgsep|.
         MsgSeparator = { bg = vim.o.cmdheight == 0 and theme.ui.bg or theme.ui.bg_m3 },
         -- MoreMsg		|more-prompt|
@@ -74,7 +74,7 @@ function M.setup(colors, config)
         -- NonText		'@' at the end of the window, characters from 'showbreak' and other characters that do not really exist in the text (e.g., ">" displayed when a double-wide character doesn't fit at the end of the line). See also |hl-EndOfBuffer|.
         NonText = { fg = theme.ui.nontext },
         -- Normal		Normal text.
-        Normal = { fg = theme.ui.fg, bg = not config.transparent and theme.ui.bg or "NONE" },
+        Normal = { fg = theme.ui.fg, bg = theme.ui.none },
         -- NormalFloat	Normal text in floating windows.
         NormalFloat = { fg = theme.ui.float.fg, bg = theme.ui.float.bg },
         -- FloatBorder	Border of floating windows.
@@ -118,15 +118,15 @@ function M.setup(colors, config)
         -- SpellRare	Word that is recognized by the spellchecker as one that is hardly ever used. |spell| Combined with the highlighting used otherwise.
         SpellRare = { undercurl = config.undercurl, underline = not config.undercurl, sp = theme.diag.warning },
         -- StatusLine	Status line of current window.
-        StatusLine = { fg = theme.ui.fg_dim, bg = theme.ui.bg_m3 },
+        StatusLine = { fg = theme.ui.fg_dim, bg = theme.ui.none },
         -- StatusLineNC	Status lines of not-current windows. Note: If this is equal to "StatusLine", Vim will use "^^^" in the status line of the current window.
-        StatusLineNC = { fg = theme.ui.nontext, bg = theme.ui.bg_m3 },
+        StatusLineNC = { fg = theme.ui.nontext, bg = theme.ui.none },
         -- TabLine		Tab pages line, not active tab page label.
-        TabLine = { bg = theme.ui.bg_m3, fg = theme.ui.special },
+        TabLine = { bg = theme.ui.none, fg = theme.ui.special },
         -- TabLineFill	Tab pages line, where there are no labels.
-        TabLineFill = { bg = theme.ui.bg },
+        TabLineFill = { bg = theme.ui.none },
         -- TabLineSel	Tab pages line, active tab page label.
-        TabLineSel = { fg = theme.ui.fg_dim, bg = theme.ui.bg_p1 },
+        TabLineSel = { fg = theme.ui.fg_dim, bg = not config.transparent and theme.ui.bg_p1 or "NONE", bold = true },
         -- Title		Titles for output from ":set all", ":autocmd" etc.
         Title = { fg = theme.syn.fun, bold = true },
         -- Visual		Visual mode selection.
@@ -148,7 +148,7 @@ function M.setup(colors, config)
         -- NormalSB = { link = "Normal" },
 
         debugPC = { bg = theme.diff.delete },
-        debugBreakpoint = { fg = theme.syn.special1, bg = theme.ui.bg_gutter },
+        debugBreakpoint = { fg = theme.syn.special1, bg = theme.ui.none },
 
         LspReferenceText = { bg = theme.ui.bg_p2 },
         LspReferenceRead = { link = "LspReferenceText" },
@@ -167,10 +167,10 @@ function M.setup(colors, config)
         DiagnosticFloatingHint = { fg = theme.diag.hint },
         DiagnosticFloatingOk = { fg = theme.diag.ok },
 
-        DiagnosticSignError = { fg = theme.diag.error, bg = theme.ui.bg_gutter },
-        DiagnosticSignWarn = { fg = theme.diag.warning, bg = theme.ui.bg_gutter },
-        DiagnosticSignInfo = { fg = theme.diag.info, bg = theme.ui.bg_gutter },
-        DiagnosticSignHint = { fg = theme.diag.hint, bg = theme.ui.bg_gutter },
+        DiagnosticSignError = { fg = theme.diag.error, bg = theme.ui.none },
+        DiagnosticSignWarn = { fg = theme.diag.warning, bg = theme.ui.none },
+        DiagnosticSignInfo = { fg = theme.diag.info, bg = theme.ui.none },
+        DiagnosticSignHint = { fg = theme.diag.hint, bg = theme.ui.none },
 
         DiagnosticVirtualTextError = { link = "DiagnosticError" },
         DiagnosticVirtualTextWarn = { link = "DiagnosticWarn" },

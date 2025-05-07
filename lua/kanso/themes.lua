@@ -56,6 +56,8 @@ local c = require("kanso.lib.color")
 ---@field bg_p2 ColorSpec Lighter background Cursor{Line,Column}, TabLineSel (Selected Items)
 ---@field bg_gutter ColorSpec {Sign,Fold}Column, LineNr
 ---@field special ColorSpec SpecialKey
+---@field indent_line ColorSpec IndentLine
+---@field active_indent_line ColorSpec IndentLine
 ---@field nontext ColorSpec LineNr, NonText
 ---@field whitespace ColorSpec Whitespace
 ---@field bg_search ColorSpec
@@ -93,35 +95,36 @@ return {
     ---@param palette PaletteColors
     ---@return ThemeColors
     zen = function(palette)
-         return {
+        return {
             ui = {
-                fg         = palette.inkWhite,
-                fg_dim     = palette.oldWhite,
-                fg_reverse = palette.zenBlue1,
+                fg                               = palette.inkWhite,
+                fg_dim                           = palette.oldWhite,
+                fg_reverse                       = palette.zenBlue1,
 
-                bg_dim     = palette.zen0,
-                bg_gutter  = palette.zen0,
+                bg_dim                           = palette.zen0,
 
-                bg_m3      = palette.zen0,
-                bg_m2      = palette.zen0,
-                bg_m1      = palette.zen0,
-                bg         = palette.zen0,
-                bg_p1      = palette.zen1,
-                bg_p2      = palette.zen2,
+                bg_m3                            = palette.zen0,
+                bg_m2                            = palette.zen0,
+                bg_m1                            = palette.zen0,
+                bg                               = palette.zen0,
+                bg_p1                            = palette.zen1,
+                bg_p2                            = palette.zen2,
 
-                special    = palette.inkGray3,
-                whitespace = palette.inkAsh,
-                nontext    = palette.inkAsh,
+                special                          = palette.inkGray3,
+                indent_line                      = palette.inkBlack2,
+                active_indent_line               = palette.inkBlack3,
+                whitespace                       = palette.inkBlack0,
+                nontext                          = palette.inkAsh,
 
-                bg_visual  = palette.inkBlack2,
-                bg_search  = palette.zenBlue2,
+                bg_visual                        = palette.inkBlack2,
+                bg_search                        = palette.zenBlue2,
 
-                cursor_line_nr_foreground = palette.inkGray3,
+                cursor_line_nr_foreground        = palette.inkGray3,
                 cursor_line_nr_active_foreground = palette.fujiWhite,
-                cursor_bg = palette.fujiWhite,
-                cursor_fg = palette.zen0,
+                cursor_bg                        = palette.fujiWhite,
+                cursor_fg                        = palette.zen0,
 
-                pmenu      = {
+                pmenu                            = {
                     fg       = palette.fujiWhite,
                     fg_sel   = "NONE",
                     bg       = palette.zenBlue1,
@@ -130,10 +133,10 @@ return {
                     bg_sbar  = palette.zenBlue1,
                 },
 
-                float      = {
+                float                            = {
                     fg        = palette.oldWhite,
                     bg        = palette.zen0,
-                    fg_border = palette.zen3,
+                    fg_border = palette.zen2,
                     bg_border = palette.zen0,
                 },
             },
@@ -177,59 +180,60 @@ return {
                 changed = palette.autumnYellow,
             },
             term = {
-                palette.zen0, -- black
-                palette.inkRed, -- red
-                palette.inkGreen2, -- green
-                palette.inkYellow, -- yellow
-                palette.inkBlue2, -- blue
-                palette.inkPink, -- magenta
-                palette.inkWhite, -- cyan
-                palette.oldWhite, -- white
-                palette.inkGray1, -- bright black
-                palette.zenRed, -- bright red
-                palette.inkGreen, -- bright green
-                palette.carpYellow, -- bright yellow
-                palette.springBlue, -- bright blue
+                palette.zen0,          -- black
+                palette.inkRed,        -- red
+                palette.inkGreen2,     -- green
+                palette.inkYellow,     -- yellow
+                palette.inkBlue2,      -- blue
+                palette.inkPink,       -- magenta
+                palette.inkWhite,      -- cyan
+                palette.oldWhite,      -- white
+                palette.inkGray1,      -- bright black
+                palette.zenRed,        -- bright red
+                palette.inkGreen,      -- bright green
+                palette.carpYellow,    -- bright yellow
+                palette.springBlue,    -- bright blue
                 palette.springViolet1, -- bright magenta
-                palette.zenAqua2, -- bright cyan
-                palette.inkWhite, -- bright white
-                palette.inkOrange, -- extended color 1
-                palette.inkOrange2, -- extended color 2
+                palette.zenAqua2,      -- bright cyan
+                palette.inkWhite,      -- bright white
+                palette.inkOrange,     -- extended color 1
+                palette.inkOrange2,    -- extended color 2
             },
         }
     end,
     ---@param palette PaletteColors
     ---@return ThemeColors
     ink = function(palette)
-         return {
+        return {
             ui = {
-                fg         = palette.inkWhite,
-                fg_dim     = palette.oldWhite,
-                fg_reverse = palette.zenBlue1,
+                fg                               = palette.inkWhite,
+                fg_dim                           = palette.oldWhite,
+                fg_reverse                       = palette.zenBlue1,
 
-                bg_dim     = palette.inkBlack0,
-                bg_gutter  = palette.inkBlack0,
+                bg_dim                           = palette.inkBlack0,
 
-                bg_m3      = palette.inkBlack0,
-                bg_m2      = palette.inkBlack0,
-                bg_m1      = palette.inkBlack0,
-                bg         = palette.inkBlack0,
-                bg_p1      = palette.inkBlack1,
-                bg_p2      = palette.inkBlack2,
+                bg_m3                            = palette.inkBlack0,
+                bg_m2                            = palette.inkBlack0,
+                bg_m1                            = palette.inkBlack0,
+                bg                               = palette.inkBlack0,
+                bg_p1                            = palette.inkBlack1,
+                bg_p2                            = palette.inkBlack2,
 
-                special    = palette.inkGray3,
-                whitespace = palette.inkAsh,
-                nontext    = palette.inkAsh,
+                special                          = palette.inkGray3,
+                indent_line                      = palette.inkBlack2,
+                active_indent_line               = palette.inkBlack3,
+                whitespace                       = palette.inkBlack0,
+                nontext                          = palette.inkAsh,
 
-                bg_visual  = palette.inkBlack3,
-                bg_search  = palette.zenBlue2,
+                bg_visual                        = palette.inkBlack3,
+                bg_search                        = palette.zenBlue2,
 
-                cursor_line_nr_foreground = palette.inkGray3,
+                cursor_line_nr_foreground        = palette.inkGray3,
                 cursor_line_nr_active_foreground = palette.fujiWhite,
-                cursor_bg = palette.fujiWhite,
-                cursor_fg = palette.inkBlack0,
+                cursor_bg                        = palette.fujiWhite,
+                cursor_fg                        = palette.inkBlack0,
 
-                pmenu      = {
+                pmenu                            = {
                     fg       = palette.fujiWhite,
                     fg_sel   = "NONE",
                     bg       = palette.zenBlue1,
@@ -238,10 +242,10 @@ return {
                     bg_sbar  = palette.zenBlue1,
                 },
 
-                float      = {
+                float                            = {
                     fg        = palette.oldWhite,
                     bg        = palette.inkBlack0,
-                    fg_border = palette.inkBlack3,
+                    fg_border = palette.inkBlack2,
                     bg_border = palette.inkBlack0,
                 },
             },
@@ -285,24 +289,24 @@ return {
                 changed = palette.autumnYellow,
             },
             term = {
-                palette.inkBlack0, -- black
-                palette.inkRed, -- red
-                palette.inkGreen2, -- green
-                palette.inkYellow, -- yellow
-                palette.inkBlue2, -- blue
-                palette.inkPink, -- magenta
-                palette.inkWhite, -- cyan
-                palette.oldWhite, -- white
-                palette.inkGray1, -- bright black
-                palette.zenRed, -- bright red
-                palette.inkGreen, -- bright green
-                palette.carpYellow, -- bright yellow
-                palette.springBlue, -- bright blue
+                palette.inkBlack0,     -- black
+                palette.inkRed,        -- red
+                palette.inkGreen2,     -- green
+                palette.inkYellow,     -- yellow
+                palette.inkBlue2,      -- blue
+                palette.inkPink,       -- magenta
+                palette.inkWhite,      -- cyan
+                palette.oldWhite,      -- white
+                palette.inkGray1,      -- bright black
+                palette.zenRed,        -- bright red
+                palette.inkGreen,      -- bright green
+                palette.carpYellow,    -- bright yellow
+                palette.springBlue,    -- bright blue
                 palette.springViolet1, -- bright magenta
-                palette.zenAqua2, -- bright cyan
-                palette.inkWhite, -- bright white
-                palette.inkOrange, -- extended color 1
-                palette.inkOrange2, -- extended color 2
+                palette.zenAqua2,      -- bright cyan
+                palette.inkWhite,      -- bright white
+                palette.inkOrange,     -- extended color 1
+                palette.inkOrange2,    -- extended color 2
             },
         }
     end,
@@ -311,33 +315,34 @@ return {
     pearl = function(palette)
         return {
             ui = {
-                fg         = palette.pearlInk0,
-                fg_dim     = palette.pearlInk0,
-                fg_reverse = palette.pearlGray,
+                fg                               = palette.pearlInk0,
+                fg_dim                           = palette.pearlInk0,
+                fg_reverse                       = palette.pearlGray,
 
-                bg_dim     = palette.pearlWhite0,
-                bg_gutter  = palette.pearlWhite0,
+                bg_dim                           = palette.pearlWhite0,
 
-                bg_m3      = palette.pearlWhite0,
-                bg_m2      = palette.pearlWhite0,
-                bg_m1      = palette.pearlWhite0,
-                bg         = palette.pearlWhite0,
-                bg_p1      = palette.pearlWhite1,
-                bg_p2      = palette.pearlWhite1,
+                bg_m3                            = palette.pearlWhite0,
+                bg_m2                            = palette.pearlWhite0,
+                bg_m1                            = palette.pearlWhite0,
+                bg                               = palette.pearlWhite0,
+                bg_p1                            = palette.pearlWhite1,
+                bg_p2                            = palette.pearlWhite1,
 
-                nontext    = palette.pearlViolet1,
-                whitespace = palette.pearlViolet1,
-                special    = palette.pearlViolet2,
+                nontext                          = palette.pearlViolet1,
+                whitespace                       = palette.pearlWhite0,
+                special                          = palette.pearlViolet2,
+                indent_line                      = palette.pearlWhite1,
+                active_indent_line               = palette.pearlWhite2,
 
-                bg_visual  = palette.pearlWhite2,
-                bg_search  = palette.pearlBlue2,
+                bg_visual                        = palette.pearlWhite2,
+                bg_search                        = palette.pearlBlue2,
 
-                cursor_line_nr_foreground = palette.pearlGray4,
+                cursor_line_nr_foreground        = palette.pearlGray4,
                 cursor_line_nr_active_foreground = palette.inkBlack2,
-                cursor_bg = palette.fujiWhite,
-                cursor_fg = palette.inkBlack2,
+                cursor_bg                        = palette.fujiWhite,
+                cursor_fg                        = palette.inkBlack2,
 
-                pmenu      = {
+                pmenu                            = {
                     fg       = palette.pearlInk2,
                     fg_sel   = "NONE", -- This is important to make highlights pass-through
                     bg       = palette.pearlBlue1,
@@ -345,10 +350,10 @@ return {
                     bg_sbar  = palette.pearlBlue1,
                     bg_thumb = palette.pearlBlue2,
                 },
-                float      = {
+                float                            = {
                     fg        = palette.pearlInk2,
                     bg        = palette.pearlWhite0,
-                    fg_border = palette.pearlGray2,
+                    fg_border = palette.pearlWhite2,
                     bg_border = palette.pearlWhite0,
                 },
             },
@@ -392,24 +397,24 @@ return {
                 hint    = palette.pearlAqua2,
             },
             term = {
-                palette.inkBlack2, -- black
-                palette.pearlRed, -- red
-                palette.pearlGreen, -- green
-                palette.pearlYellow, -- yellow
-                palette.pearlBlue4, -- blue
-                palette.pearlPink, -- magenta
-                palette.pearlAqua, -- cyan
-                palette.pearlInk0, -- white
-                palette.pearlGray3 , -- bright black
-                palette.pearlRed2, -- bright red
-                palette.pearlGreen2, -- bright green
+                palette.inkBlack2,    -- black
+                palette.pearlRed,     -- red
+                palette.pearlGreen,   -- green
+                palette.pearlYellow,  -- yellow
+                palette.pearlBlue4,   -- blue
+                palette.pearlPink,    -- magenta
+                palette.pearlAqua,    -- cyan
+                palette.pearlInk0,    -- white
+                palette.pearlGray3,   -- bright black
+                palette.pearlRed2,    -- bright red
+                palette.pearlGreen2,  -- bright green
                 palette.pearlYellow2, -- bright yellow
-                palette.pearlTeal2, -- bright blue
+                palette.pearlTeal2,   -- bright blue
                 palette.pearlViolet4, -- bright magenta
-                palette.pearlAqua2, -- bright cyan
-                palette.pearlInk2, -- bright white
+                palette.pearlAqua2,   -- bright cyan
+                palette.pearlInk2,    -- bright white
                 palette.pearlOrange2, -- extended color 1
-                palette.pearlRed3, -- extended color 2
+                palette.pearlRed3,    -- extended color 2
             },
         }
     end,

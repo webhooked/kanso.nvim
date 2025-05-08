@@ -76,21 +76,21 @@ function M.setup(colors, config)
         -- Normal		Normal text.
         Normal = { fg = theme.ui.fg, bg = config.transparent and theme.ui.none or theme.ui.bg },
         -- NormalFloat	Normal text in floating windows.
-        NormalFloat = { fg = theme.ui.float.fg, bg = theme.ui.float.bg },
+        NormalFloat = { fg = theme.ui.float.fg, bg = config.transparent and theme.ui.none or theme.ui.float.bg },
         -- FloatBorder	Border of floating windows.
-        FloatBorder = { fg = theme.ui.float.fg_border, bg = theme.ui.float.bg_border },
+        FloatBorder = { fg = theme.ui.float.fg_border, bg = config.transparent and theme.ui.none or theme.ui.float.bg_border },
         -- FloatTitle	Title of floating windows.
-        FloatTitle = { fg = theme.ui.special, bg = theme.ui.float.bg_border, bold = true },
+        FloatTitle = { fg = theme.ui.special, bg = config.transparent and theme.ui.none or theme.ui.float.bg_border, bold = true },
         -- FloatFooter	Footer of floating windows.
-        FloatFooter = { fg = theme.ui.nontext, bg = theme.ui.float.bg_border },
+        FloatFooter = { fg = theme.ui.nontext, bg = config.transparent and theme.ui.none or theme.ui.float.bg_border },
         -- NormalNC	Normal text in non-current windows.
         NormalNC = config.dimInactive and { fg = theme.ui.fg_dim, bg = theme.ui.bg_dim } or { link = "Normal" },
         -- Pmenu		Popup menu: Normal item.
-        Pmenu = { fg = theme.ui.pmenu.fg, bg = theme.ui.pmenu.bg },
+        Pmenu = { fg = theme.ui.pmenu.fg, bg = config.transparent and theme.ui.none or theme.ui.pmenu.bg },
         -- PmenuSel	Popup menu: Selected item.
         PmenuSel = { fg = theme.ui.pmenu.fg_sel, bg = theme.ui.pmenu.bg_sel },
         -- PmenuKind	Popup menu: Normal item "kind".
-        PmenuKind = { fg = theme.ui.fg_dim, bg = theme.ui.pmenu.bg },
+        PmenuKind = { fg = theme.ui.fg_dim, bg = config.transparent and theme.ui.none or theme.ui.pmenu.bg },
         -- PmenuKindSel	Popup menu: Selected item "kind".
         PmenuKindSel = { fg = theme.ui.fg_dim, bg = theme.ui.pmenu.bg_sel },
         -- PmenuExtra	Popup menu: Normal item "extra text".
@@ -98,13 +98,13 @@ function M.setup(colors, config)
         -- PmenuExtraSel	Popup menu: Selected item "extra text".
         PmenuExtraSel = { fg = theme.ui.special, bg = theme.ui.pmenu.bg_sel },
         -- PmenuSbar	Popup menu: Scrollbar.
-        PmenuSbar = { bg = theme.ui.pmenu.bg_sbar },
+        PmenuSbar = { bg = config.transparent and theme.ui.none or theme.ui.pmenu.bg_sbar },
         -- PmenuThumb	Popup menu: Thumb of the scrollbar.
         PmenuThumb = { bg = theme.ui.pmenu.bg_thumb },
         -- Question	|hit-enter| prompt and yes/no questions.
         Question = { link = "MoreMsg" },
         -- QuickFixLine	Current |quickfix| item in the quickfix window. Combined with |hl-CursorLine| when the cursor is there.
-        QuickFixLine = { bg = theme.ui.bg_p1 },
+        QuickFixLine = { bg = config.transparent and theme.ui.none or theme.ui.bg_p1 },
         -- Search		Last search pattern highlighting (see 'hlsearch'). Also used for similar items that need to stand out.
         Search = { fg = theme.ui.fg, bg = theme.ui.bg_search },
         -- SpecialKey	Unprintable characters: Text displayed differently from what it really is. But not 'listchars' whitespace. |hl-Whitespace|

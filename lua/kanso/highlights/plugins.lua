@@ -64,7 +64,7 @@ function M.setup(colors, config)
         NvimTreeExecFile                     = { fg = theme.syn.string, bold = true },
         NvimTreeOpenedFile                   = { fg = theme.syn.special1, italic = not config.disableItalics },
         NvimTreeWinSeparator                 = { link = "WinSeparator" },
-        NvimTreeWindowPicker                 = { bg = theme.ui.bg_m1, fg = theme.syn.special1, bold = true },
+        NvimTreeWindowPicker                 = { bg = config.transparent and theme.ui.none or theme.ui.bg_m1, fg = theme.syn.special1, bold = true },
         -- NeoTree
         NeoTreeTabInactive                   = { fg = theme.ui.special, bg = config.transparent and theme.ui.none or theme.ui.bg },
         NeoTreeTabActive                     = { fg = theme.ui.fg_dim, bg = config.transparent and theme.ui.none or theme.ui.bg_p1, bold = true },
@@ -92,7 +92,7 @@ function M.setup(colors, config)
         DashboardKey                         = { fg = theme.syn.special1 },
         DashboardIcon                        = { fg = theme.ui.special },
         -- Notify
-        NotifyBackground                     = { bg = theme.ui.bg },
+        NotifyBackground                     = { bg = config.transparent and theme.ui.none or theme.ui.bg },
         NotifyERRORBorder                    = { link = "DiagnosticError" },
         NotifyWARNBorder                     = { link = "DiagnosticWarn" },
         NotifyINFOBorder                     = { link = "DiagnosticInfo" },
@@ -142,7 +142,7 @@ function M.setup(colors, config)
         DapUIRestart                         = { fg = theme.syn.string },                  --guifg=#A9FF68"
         DapUIUnavailable                     = { fg = theme.syn.comment },                 --guifg=#424242"
         -- Floaterm
-        FloatermBorder                       = { fg = theme.ui.float.fg_border, bg = theme.ui.bg },
+        FloatermBorder                       = { fg = theme.ui.float.fg_border, bg = config.transparent and theme.ui.none or theme.ui.bg },
         -- NeoVim                         = {},
         healthError                          = { fg = theme.diag.error },
         healthSuccess                        = { fg = theme.diag.ok },
@@ -358,8 +358,8 @@ function M.setup(colors, config)
         MiniFilesDirectory                   = { link = "Directory" },
         MiniFilesFile                        = { fg = theme.ui.fg },
         MiniFilesNormal                      = { link = "NormalFloat" },
-        MiniFilesTitle                       = { fg = theme.ui.special, bg = theme.ui.float.bg_border, bold = true },
-        MiniFilesTitleFocused                = { fg = theme.ui.fg, bg = theme.ui.float.bg_border, bold = true },
+        MiniFilesTitle                       = { fg = theme.ui.special, bg = config.transparent and theme.ui.none or theme.ui.float.bg_border, bold = true },
+        MiniFilesTitleFocused                = { fg = theme.ui.fg, bg = config.transparent and theme.ui.none or theme.ui.float.bg_border, bold = true },
 
         MiniHipatternsFixme                  = { fg = theme.ui.bg, bg = theme.diag.error, bold = true },
         MiniHipatternsHack                   = { fg = theme.ui.bg, bg = theme.diag.warning, bold = true },
@@ -409,7 +409,7 @@ function M.setup(colors, config)
         MiniPickNormal                       = { link = "NormalFloat" },
         MiniPickPreviewLine                  = { link = "CursorLine" },
         MiniPickPreviewRegion                = { link = "IncSearch" },
-        MiniPickPrompt                       = { fg = theme.syn.fun, bg = theme.ui.float.bg_border },
+        MiniPickPrompt                       = { fg = theme.syn.fun, bg = config.transparent and theme.ui.none or theme.ui.float.bg_border },
 
         MiniStarterCurrent                   = { nocombine = true },
         MiniStarterFooter                    = { fg = theme.syn.deprecated },
@@ -421,9 +421,9 @@ function M.setup(colors, config)
         MiniStarterSection                   = { fg = theme.diag.ok },
         MiniStarterQuery                     = { fg = theme.diag.info },
 
-        MiniStatuslineDevinfo                = { fg = theme.ui.fg_dim, bg = theme.ui.bg_p1 },
-        MiniStatuslineFileinfo               = { fg = theme.ui.fg_dim, bg = theme.ui.bg_p1 },
-        MiniStatuslineFilename               = { fg = theme.ui.fg_dim, bg = theme.ui.bg_dim },
+        MiniStatuslineDevinfo                = { fg = theme.ui.fg_dim, bg = config.transparent and theme.ui.none or theme.ui.bg_p1 },
+        MiniStatuslineFileinfo               = { fg = theme.ui.fg_dim, bg = config.transparent and theme.ui.none or theme.ui.bg_p1 },
+        MiniStatuslineFilename               = { fg = theme.ui.fg_dim, bg = config.transparent and theme.ui.none or theme.ui.bg_dim },
         MiniStatuslineInactive               = { link = "StatusLineNC" },
         MiniStatuslineModeCommand            = { fg = theme.ui.bg, bg = theme.syn.operator, bold = true },
         MiniStatuslineModeInsert             = { fg = theme.ui.bg, bg = theme.diag.ok, bold = true },
@@ -434,7 +434,7 @@ function M.setup(colors, config)
 
         MiniSurround                         = { link = "IncSearch" },
 
-        MiniTablineCurrent                   = { fg = theme.ui.fg_dim, bg = theme.ui.bg_p1, bold = true },
+        MiniTablineCurrent                   = { fg = theme.ui.fg_dim, bg = config.transparent and theme.ui.none or theme.ui.bg_p1, bold = true },
         MiniTablineFill                      = { link = "TabLineFill" },
         MiniTablineHidden                    = { fg = theme.ui.special, bg = theme.ui.bg_m3 },
         MiniTablineModifiedCurrent           = { fg = theme.ui.bg_p1, bg = theme.ui.fg_dim, bold = true },

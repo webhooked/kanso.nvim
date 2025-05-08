@@ -98,6 +98,7 @@ return {
     zen = function(palette)
         return {
             ui = {
+                none                             = "NONE",
                 fg                               = palette.inkWhite,
                 fg_dim                           = palette.oldWhite,
                 fg_reverse                       = palette.zenBlue1,
@@ -208,6 +209,7 @@ return {
     ink = function(palette)
         return {
             ui = {
+                none                             = "NONE",
                 fg                               = palette.inkWhite,
                 fg_dim                           = palette.oldWhite,
                 fg_reverse                       = palette.zenBlue1,
@@ -318,6 +320,7 @@ return {
     pearl = function(palette)
         return {
             ui = {
+                none                             = "NONE",
                 fg                               = palette.pearlInk0,
                 fg_dim                           = palette.pearlInk0,
                 fg_reverse                       = palette.pearlGray,

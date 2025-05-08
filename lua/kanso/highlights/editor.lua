@@ -41,7 +41,7 @@ function M.setup(colors, config)
         -- ErrorMsg	Error messages on the command line.
         ErrorMsg = { fg = theme.diag.error },
         -- WinSeparator	Separators between window splits.
-        WinSeparator = { fg = theme.ui.bg_m3, bg = config.dimInactive and theme.ui.bg_dim or "NONE" },
+        WinSeparator = { fg = theme.ui.bg_m3, bg = config.dimInactive and theme.ui.bg_dim or theme.ui.none },
         VertSplit = { link = "WinSeparator" },
         -- Folded		Line used for closed folds.
         Folded = { fg = theme.ui.special, bg = theme.ui.bg_p1 },
@@ -74,7 +74,7 @@ function M.setup(colors, config)
         -- NonText		'@' at the end of the window, characters from 'showbreak' and other characters that do not really exist in the text (e.g., ">" displayed when a double-wide character doesn't fit at the end of the line). See also |hl-EndOfBuffer|.
         NonText = { fg = theme.ui.nontext },
         -- Normal		Normal text.
-        Normal = { fg = theme.ui.fg, bg = not config.transparent and theme.ui.bg or "NONE" },
+        Normal = { fg = theme.ui.fg, bg = config.transparent and theme.ui.none or theme.ui.bg },
         -- NormalFloat	Normal text in floating windows.
         NormalFloat = { fg = theme.ui.float.fg, bg = theme.ui.float.bg },
         -- FloatBorder	Border of floating windows.
@@ -126,7 +126,7 @@ function M.setup(colors, config)
         -- TabLineFill	Tab pages line, where there are no labels.
         TabLineFill = { bg = theme.ui.none },
         -- TabLineSel	Tab pages line, active tab page label.
-        TabLineSel = { fg = theme.ui.fg_dim, bg = not config.transparent and theme.ui.bg_p1 or "NONE", bold = true },
+        TabLineSel = { fg = theme.ui.fg_dim, bg = not config.transparent and theme.ui.bg_p1 or theme.ui.none, bold = true },
         -- Title		Titles for output from ":set all", ":autocmd" etc.
         Title = { fg = theme.syn.fun, bold = true },
         -- Visual		Visual mode selection.
@@ -140,9 +140,9 @@ function M.setup(colors, config)
         -- WildMenu	Current match in 'wildmenu' completion.
         WildMenu = { link = "Pmenu" },
         -- WinBar		Window bar of current window.
-        WinBar = { fg = theme.ui.fg_dim, bg = "NONE" },
+        WinBar = { fg = theme.ui.fg_dim, bg = theme.ui.none },
         -- WinBarNC	Window bar of not-current windows.
-        WinBarNC = { fg = theme.ui.fg_dim, bg = config.dimInactive and theme.ui.bg_dim or "NONE" },
+        WinBarNC = { fg = theme.ui.fg_dim, bg = config.dimInactive and theme.ui.bg_dim or theme.ui.none },
 
         -- SignColumnSB = { link = "SignColumn" },
         -- NormalSB = { link = "Normal" },

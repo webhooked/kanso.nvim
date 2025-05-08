@@ -10,7 +10,7 @@ function M.setup(colors, config)
     return {
         -- *Comment	any comment
         Comment = vim.tbl_extend("force", { fg = theme.syn.comment }, config.disableItalics and {} or config
-        .commentStyle),
+            .commentStyle),
 
         -- *Constant	any constant
         Constant = { fg = theme.syn.constant },
@@ -95,7 +95,7 @@ function M.setup(colors, config)
         -- markdownHeadingDelimiter = {},
         markdownCode = { fg = theme.syn.string },
         markdownCodeBlock = { fg = theme.syn.string },
-        markdownEscape = { fg = "NONE" },
+        markdownEscape = { fg = theme.ui.none },
         -- markdownH1 = {},
         -- markdownH2 = {},
         -- markdownLinkText = {},

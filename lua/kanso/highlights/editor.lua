@@ -74,7 +74,7 @@ function M.setup(colors, config)
         -- NonText		'@' at the end of the window, characters from 'showbreak' and other characters that do not really exist in the text (e.g., ">" displayed when a double-wide character doesn't fit at the end of the line). See also |hl-EndOfBuffer|.
         NonText = { fg = theme.ui.nontext },
         -- Normal		Normal text.
-        Normal = { fg = theme.ui.fg, bg = theme.ui.none },
+        Normal = { fg = theme.ui.fg, bg = not config.transparent and theme.ui.bg or "NONE" },
         -- NormalFloat	Normal text in floating windows.
         NormalFloat = { fg = theme.ui.float.fg, bg = theme.ui.float.bg },
         -- FloatBorder	Border of floating windows.

@@ -118,7 +118,7 @@ return {
                 whitespace                       = palette.inkBlack0,
                 nontext                          = palette.inkAsh,
 
-                bg_visual                        = palette.inkBlack2,
+                bg_visual                        = palette.inkBlack3,
                 bg_search                        = palette.zenBlue2,
 
                 cursor_line_nr_foreground        = palette.inkGray3,

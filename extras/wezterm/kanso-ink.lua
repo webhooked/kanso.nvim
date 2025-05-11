@@ -4,8 +4,8 @@ local config = {
 		foreground = "#C5C9C7",
 		background = "#14171d",
 
-		cursor_bg = "#14171d",
-		cursor_fg = "#C5C9C7",
+		cursor_bg = "#C5C9C7",
+		cursor_fg = "#14171d",
 		cursor_border = "#C5C9C7",
 
 		selection_fg = "#C5C9C7",

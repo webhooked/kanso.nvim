@@ -129,10 +129,10 @@ return {
                 pmenu                            = {
                     fg       = palette.fujiWhite,
                     fg_sel   = "NONE",
-                    bg       = palette.zenBlue1,
-                    bg_sel   = palette.zenBlue2,
-                    bg_thumb = palette.zenBlue2,
-                    bg_sbar  = palette.zenBlue1,
+                    bg       = palette.zen0,
+                    bg_sel   = palette.inkBlack3,
+                    bg_thumb = palette.inkBlack3,
+                    bg_sbar  = palette.zen0,
                 },
 
                 float                            = {
@@ -240,10 +240,10 @@ return {
                 pmenu                            = {
                     fg       = palette.fujiWhite,
                     fg_sel   = "NONE",
-                    bg       = palette.zenBlue1,
-                    bg_sel   = palette.zenBlue2,
-                    bg_thumb = palette.zenBlue2,
-                    bg_sbar  = palette.zenBlue1,
+                    bg       = palette.inkBlack0,
+                    bg_sel   = palette.inkBlack3,
+                    bg_thumb = palette.inkBlack3,
+                    bg_sbar  = palette.inkBlack0,
                 },
 
                 float                            = {
@@ -351,10 +351,10 @@ return {
                 pmenu                            = {
                     fg       = palette.pearlInk2,
                     fg_sel   = "NONE", -- This is important to make highlights pass-through
-                    bg       = palette.pearlBlue1,
-                    bg_sel   = palette.pearlBlue3,
-                    bg_sbar  = palette.pearlBlue1,
-                    bg_thumb = palette.pearlBlue2,
+                    bg       = palette.pearlWhite0,
+                    bg_sel   = palette.pearlWhite2,
+                    bg_thumb = palette.pearlWhite2,
+                    bg_sbar  = palette.pearlWhite0,
                 },
                 float                            = {
                     fg        = palette.pearlInk2,

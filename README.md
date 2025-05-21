@@ -74,6 +74,7 @@ There is no need to call setup if you are ok with the defaults.
 ```lua
 -- Default options:
 require('kanso').setup({
+    bold = true,                 -- enable bold fonts
     compile = false,             -- enable compiling the colorscheme
     undercurl = true,            -- enable undercurls
     commentStyle = { italic = true },

@@ -11,9 +11,9 @@ function M.setup(colors, config)
         -- ColorColumn	Used for the columns set with 'colorcolumn'.
         ColorColumn = { bg = theme.ui.bg_p1 },
         -- Conceal		Placeholder characters substituted for concealed text (see 'conceallevel').
-        Conceal = { fg = theme.ui.special, bold = true },
+        Conceal = { fg = theme.ui.special, bold = config.bold },
         -- CurSearch	Used for highlighting a search pattern under the cursor (see 'hlsearch').
-        CurSearch = { fg = theme.ui.fg, bg = theme.ui.bg_search, bold = true },
+        CurSearch = { fg = theme.ui.fg, bg = theme.ui.bg_search, bold = config.bold },
         -- Cursor		Character under the cursor.
         Cursor = { fg = theme.ui.cursor_fg, bg = theme.ui.cursor_bg },
         -- lCursor		Character under the cursor when |language-mapping| is used (see 'guicursor').
@@ -62,11 +62,11 @@ function M.setup(colors, config)
         -- CursorLineFold	Like FoldColumn when 'cursorline' is set for the cursor line.
         -- CursorLineSign	Like SignColumn when 'cursorline' is set for the cursor line.
         -- MatchParen	Character under the cursor or just before it, if it is a paired bracket, and its match. |pi_paren.txt|
-        MatchParen = { fg = theme.diag.warning, bold = true },
+        MatchParen = { fg = theme.diag.warning, bold = config.bold },
         -- ModeMsg		'showmode' message (e.g., "-- INSERT --").
-        ModeMsg = { fg = theme.diag.warning, bold = true },
+        ModeMsg = { fg = theme.diag.warning, bold = config.bold },
         -- MsgArea		Area for messages and cmdline.
-        MsgArea = vim.o.cmdheight == 0 and { link = 'StatusLine' } or { fg = theme.ui.fg_dim },
+        MsgArea = vim.o.cmdheight == 0 and { link = "StatusLine" } or { fg = theme.ui.fg_dim },
         -- MsgSeparator	Separator for scrolled messages |msgsep|.
         MsgSeparator = { bg = vim.o.cmdheight == 0 and theme.ui.bg or theme.ui.bg_m3 },
         -- MoreMsg		|more-prompt|
@@ -78,9 +78,16 @@ function M.setup(colors, config)
         -- NormalFloat	Normal text in floating windows.
         NormalFloat = { fg = theme.ui.float.fg, bg = config.transparent and theme.ui.none or theme.ui.float.bg },
         -- FloatBorder	Border of floating windows.
-        FloatBorder = { fg = theme.ui.float.fg_border, bg = config.transparent and theme.ui.none or theme.ui.float.bg_border },
+        FloatBorder = {
+            fg = theme.ui.float.fg_border,
+            bg = config.transparent and theme.ui.none or theme.ui.float.bg_border,
+        },
         -- FloatTitle	Title of floating windows.
-        FloatTitle = { fg = theme.ui.special, bg = config.transparent and theme.ui.none or theme.ui.float.bg_border, bold = true },
+        FloatTitle = {
+            fg = theme.ui.special,
+            bg = config.transparent and theme.ui.none or theme.ui.float.bg_border,
+            bold = config.bold,
+        },
         -- FloatFooter	Footer of floating windows.
         FloatFooter = { fg = theme.ui.nontext, bg = config.transparent and theme.ui.none or theme.ui.float.bg_border },
         -- NormalNC	Normal text in non-current windows.
@@ -126,9 +133,13 @@ function M.setup(colors, config)
         -- TabLineFill	Tab pages line, where there are no labels.
         TabLineFill = { bg = theme.ui.none },
         -- TabLineSel	Tab pages line, active tab page label.
-        TabLineSel = { fg = theme.ui.fg_dim, bg = not config.transparent and theme.ui.bg_p1 or theme.ui.none, bold = true },
+        TabLineSel = {
+            fg = theme.ui.fg_dim,
+            bg = not config.transparent and theme.ui.bg_p1 or theme.ui.none,
+            bold = config.bold,
+        },
         -- Title		Titles for output from ":set all", ":autocmd" etc.
-        Title = { fg = theme.syn.fun, bold = true },
+        Title = { fg = theme.syn.fun, bold = config.bold },
         -- Visual		Visual mode selection.
         Visual = { bg = theme.ui.bg_visual },
         -- VisualNOS	Visual mode selection when vim is "Not Owning the Selection".
@@ -177,10 +188,26 @@ function M.setup(colors, config)
         DiagnosticVirtualTextInfo = { link = "DiagnosticInfo" },
         DiagnosticVirtualTextHint = { link = "DiagnosticHint" },
 
-        DiagnosticUnderlineError = { undercurl = config.undercurl, underline = not config.undercurl, sp = theme.diag.error },
-        DiagnosticUnderlineWarn = { undercurl = config.undercurl, underline = not config.undercurl, sp = theme.diag.warning },
-        DiagnosticUnderlineInfo = { undercurl = config.undercurl, underline = not config.undercurl, sp = theme.diag.info },
-        DiagnosticUnderlineHint = { undercurl = config.undercurl, underline = not config.undercurl, sp = theme.diag.hint },
+        DiagnosticUnderlineError = {
+            undercurl = config.undercurl,
+            underline = not config.undercurl,
+            sp = theme.diag.error,
+        },
+        DiagnosticUnderlineWarn = {
+            undercurl = config.undercurl,
+            underline = not config.undercurl,
+            sp = theme.diag.warning,
+        },
+        DiagnosticUnderlineInfo = {
+            undercurl = config.undercurl,
+            underline = not config.undercurl,
+            sp = theme.diag.info,
+        },
+        DiagnosticUnderlineHint = {
+            undercurl = config.undercurl,
+            underline = not config.undercurl,
+            sp = theme.diag.hint,
+        },
 
         LspSignatureActiveParameter = { fg = theme.diag.warning },
         LspCodeLens = { fg = theme.syn.comment },

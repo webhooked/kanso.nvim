@@ -77,8 +77,11 @@ function M.setup(colors, config)
         -- @keyword.modifier       keywords defining type modifiers (e.g. `const`, `static`, `public`)
         -- @keyword.repeat         keywords related to loops (e.g. `for`, `while`)
         -- @keyword.return         keywords like `return` and `yield`
-        ["@keyword.return"] = vim.tbl_extend("force", { fg = theme.syn.special3 },
-            config.disableItalics and {} or config.keywordStyle),
+        ["@keyword.return"] = vim.tbl_extend(
+            "force",
+            { fg = theme.syn.special3 },
+            config.disableItalics and {} or config.keywordStyle
+        ),
         -- @keyword.debug          keywords related to debugging
         -- @keyword.exception      keywords related to exceptions (e.g. `throw`, `catch`)
         ["@keyword.exception"] = vim.tbl_extend("force", { fg = theme.syn.special3 }, config.statementStyle),
@@ -102,15 +105,15 @@ function M.setup(colors, config)
         -- @comment.documentation  comments documenting code
         --
         -- @comment.error          error-type comments (e.g. `ERROR`, `FIXME`, `DEPRECATED`)
-        ["@comment.error"] = { fg = theme.ui.fg, bg = theme.diag.error, bold = true },
+        ["@comment.error"] = { fg = theme.ui.fg, bg = theme.diag.error, bold = config.bold },
         -- @comment.warning        warning-type comments (e.g. `WARNING`, `FIX`, `HACK`)
-        ["@comment.warning"] = { fg = theme.ui.fg_reverse, bg = theme.diag.warning, bold = true },
+        ["@comment.warning"] = { fg = theme.ui.fg_reverse, bg = theme.diag.warning, bold = config.bold },
         -- @comment.todo           todo-type comments (e.g. `TODO`, `WIP`)
         -- @comment.note           note-type comments (e.g. `NOTE`, `INFO`, `XXX`)
-        ["@comment.note"] = { fg = theme.ui.fg_reverse, bg = theme.diag.hint, bold = true },
+        ["@comment.note"] = { fg = theme.ui.fg_reverse, bg = theme.diag.hint, bold = config.bold },
         --
         -- @markup.strong          bold text
-        ["@markup.strong"] = { bold = true },
+        ["@markup.strong"] = { bold = config.bold },
         -- @markup.italic          italic text
         ["@markup.italic"] = { italic = true },
         -- @markup.strikethrough   struck-through text

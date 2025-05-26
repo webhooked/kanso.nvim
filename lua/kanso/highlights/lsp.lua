@@ -12,15 +12,15 @@ function M.setup(colors, config)
         -- ["@lsp.type.function"] = { link = "Function" },
         -- ["@lsp.type.interface"] = { link = "Structure" },
         ["@lsp.type.macro"] = { link = "Macro" },
-        ["@lsp.type.method"] = { link = "@function.method" },       -- Function
-        ["@lsp.type.namespace"] = { link = "@module" },             -- Structure
+        ["@lsp.type.method"] = { link = "@function.method" }, -- Function
+        ["@lsp.type.namespace"] = { link = "@module" }, -- Structure
         ["@lsp.type.parameter"] = { link = "@variable.parameter" }, -- Identifier
         -- ["@lsp.type.property"] = { link = "Identifier" },
         -- ["@lsp.type.struct"] = { link = "Structure" },
         -- ["@lsp.type.type"] = { link = "Type" },
         -- ["@lsp.type.typeParameter"] = { link = "TypeDef" },
         ["@lsp.type.variable"] = { fg = "none" }, -- Identifier
-        ["@lsp.type.comment"] = { link = "Comment" },  -- Comment
+        ["@lsp.type.comment"] = { link = "Comment" }, -- Comment
 
         ["@lsp.type.const"] = { link = "Constant" },
         ["@lsp.type.comparison"] = { link = "Operator" },
@@ -52,7 +52,7 @@ function M.setup(colors, config)
 
         ["@lsp.typemod.variable.injected"] = { link = "@variable" },
 
-        ["@lsp.typemod.function.readonly"] = { fg = theme.syn.fun, bold = true },
+        ["@lsp.typemod.function.readonly"] = { fg = theme.syn.fun, bold = config.bold },
     }
 end
 

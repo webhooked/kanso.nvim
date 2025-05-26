@@ -21,34 +21,23 @@ local palette = {
     autumnYellow = "#DCA561",
 
     -- Diag
-    samuraiRed = "#E82424",
-    roninYellow = "#FF9E3B",
+    samuraiRed = "#C34043",
+    roninYellow = "#DCA561",
     zenAqua1 = "#6A9589",
     inkBlue = "#658594",
 
     -- Fg and Comments
     oldWhite = "#C5C9C7",
     fujiWhite = "#f2f1ef",
-    fujiGray = "#727169",
 
-    oniViolet = "#957FB8",
-    oniViolet2 = "#b8b4d0",
-    crystalBlue = "#7E9CD8",
     springViolet1 = "#938AA9",
-    springViolet2 = "#9CABCA",
     springBlue = "#7FB4CA",
-    lightBlue = "#A3D4D5",
     zenAqua2 = "#7AA89F",
 
     springGreen = "#98BB6C",
-    boatYellow1 = "#938056",
-    boatYellow2 = "#C0A36E",
     carpYellow = "#E6C384",
 
-    sakuraPink = "#D27E99",
     zenRed = "#E46876",
-    peachRed = "#FF5D62",
-    surimiOrange = "#FFA066",
     katanaGray = "#717C7C",
 
     inkBlack0 = "#14171d",
@@ -63,7 +52,7 @@ local palette = {
     inkOrange = "#b6927b",
     inkOrange2 = "#b98d7b",
     inkGray = "#A4A7A4",
-    inkGray1 = "#9E9B93",
+    inkGray1 = "#909398",
     inkGray2 = "#75797f",
     inkGray3 = "#5C6066",
     inkBlue2 = "#8ba4b0",
@@ -133,7 +122,8 @@ function M.setup(opts)
 
     if not theme then
         error(
-        "kanso.colors.setup(): Unable to infer `theme`. Either specify a theme or call this function after ':colorscheme kanso'")
+            "kanso.colors.setup(): Unable to infer `theme`. Either specify a theme or call this function after ':colorscheme kanso'"
+        )
     end
 
     -- Add to and/or override palette_colors
@@ -143,8 +133,8 @@ function M.setup(opts)
     local theme_colors = require("kanso.themes")[theme](updated_palette_colors)
 
     -- Add to and/or override theme_colors
-    local theme_overrides = vim.tbl_deep_extend("force", override_colors.theme["all"] or {},
-        override_colors.theme[theme] or {})
+    local theme_overrides =
+        vim.tbl_deep_extend("force", override_colors.theme["all"] or {}, override_colors.theme[theme] or {})
     local updated_theme_colors = vim.tbl_deep_extend("force", theme_colors, theme_overrides)
     -- return palette_colors AND theme_colors
 

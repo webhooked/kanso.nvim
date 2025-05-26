@@ -1,0 +1,45 @@
+# top-most EditorConfig file
+root = true
+
+# Unix-style newlines with a newline ending every file
+[*]
+end_of_line = lf
+insert_final_newline = true
+trim_trailing_whitespace = true
+charset = utf-8
+
+# Lua files
+[*.lua]
+indent_style = space
+indent_size = 4
+
+# Vim files
+[*.vim]
+indent_style = space
+indent_size = 2
+
+# Markdown files
+[*.md]
+indent_style = space
+indent_size = 2
+trim_trailing_whitespace = false
+
+# YAML files
+[*.{yml,yaml}]
+indent_style = space
+indent_size = 2
+
+# TOML files
+[*.toml]
+indent_style = space
+indent_size = 2
+
+# Shell scripts
+[*.sh]
+indent_style = space
+indent_size = 2
+
+# Config files
+[*.conf]
+indent_style = space
+indent_size = 2

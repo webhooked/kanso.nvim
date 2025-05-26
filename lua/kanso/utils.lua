@@ -2,7 +2,7 @@ local M = {}
 local PATH_SEP = vim.loop.os_uname().version:match("Windows") and "\\" or "/"
 
 local get_compiled_path = function(theme)
-    return table.concat({vim.fn.stdpath("state"), "kanso", theme .. "_compiled.lua"}, PATH_SEP)
+    return table.concat({ vim.fn.stdpath("state"), "kanso", theme .. "_compiled.lua" }, PATH_SEP)
 end
 
 ---@return string theme

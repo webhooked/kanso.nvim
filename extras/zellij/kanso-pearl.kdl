@@ -1,0 +1,15 @@
+themes {
+  kanso-pearl {
+    bg		"#F2F1EF"
+    fg		"#24262D"
+    red		"#D7474B"
+    green	"#6F894E"
+    blue	"#4D699B"
+    yellow	"#77713F"
+    magenta "#B35B79"
+    orange	"#CC6D00"
+    cyan	"#597B75"
+    black	"#F2F1EF"
+    white	"#24262D"
+  }
+}

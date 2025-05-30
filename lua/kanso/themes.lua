@@ -115,7 +115,7 @@ return {
                 special = palette.inkGray3,
                 indent_line = palette.inkBlack2,
                 active_indent_line = palette.inkBlack3,
-                whitespace = palette.inkBlack0,
+                whitespace = palette.inkBlack3,
                 nontext = palette.inkAsh,
 
                 bg_visual = palette.inkBlack3,
@@ -226,7 +226,7 @@ return {
                 special = palette.inkGray3,
                 indent_line = palette.inkBlack2,
                 active_indent_line = palette.inkBlack3,
-                whitespace = palette.inkBlack0,
+                whitespace = palette.inkBlack4,
                 nontext = palette.inkAsh,
 
                 bg_visual = palette.inkBlack3,
@@ -335,9 +335,9 @@ return {
                 bg_p2 = palette.pearlWhite1,
 
                 nontext = palette.pearlViolet1,
-                whitespace = palette.pearlWhite0,
+                whitespace = palette.pearlWhite3,
                 special = palette.pearlViolet2,
-                indent_line = palette.pearlWhite1,
+                indent_line = palette.pearlWhite2,
                 active_indent_line = palette.pearlWhite2,
 
                 bg_visual = palette.pearlWhite2,

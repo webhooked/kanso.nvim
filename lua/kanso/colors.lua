@@ -44,6 +44,7 @@ local palette = {
     inkBlack1 = "#1f1f26",
     inkBlack2 = "#24262D",
     inkBlack3 = "#393B42",
+    inkBlack4 = "#4b4e57",
 
     inkWhite = "#C5C9C7",
     inkGreen = "#87a987",
@@ -75,6 +76,7 @@ local palette = {
     pearlWhite0 = "#f2f1ef",
     pearlWhite1 = "#e2e1df",
     pearlWhite2 = "#dddddb",
+    pearlWhite3 = "#cacac7",
     pearlViolet1 = "#a09cac",
     pearlViolet2 = "#766b90",
     pearlViolet3 = "#c9cbd1",

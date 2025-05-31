@@ -505,7 +505,7 @@ function M.setup(colors, config)
         SnacksIndent = { fg = theme.ui.indent_line, nocombine = true },
         SnacksIndentChunk = { fg = theme.ui.active_indent_line, nocombine = true },
         SnacksIndentScope = { fg = theme.ui.active_indent_line, nocombine = true },
-        SnacksPickerListCursorLine = { fg = theme.ui.bg, bg = theme.ui.fg, bold = true },
+        SnacksPickerListCursorLine = { fg = theme.ui.fg, bg = theme.ui.bg_p2 },
         SnacksPickerInputBorder = { fg = theme.ui.none, bg = theme.ui.none },
         SnacksPickerInputTitle = { fg = theme.ui.fg, bg = config.transparent and theme.ui.none or theme.ui.bg },
         SnacksPickerBoxTitle = { fg = theme.ui.fg, bg = config.transparent and theme.ui.none or theme.ui.bg },

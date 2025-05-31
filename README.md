@@ -75,6 +75,7 @@ There is no need to call setup if you are ok with the defaults.
 -- Default options:
 require('kanso').setup({
     bold = true,                 -- enable bold fonts
+    italics = true,             -- enable italics
     compile = false,             -- enable compiling the colorscheme
     undercurl = true,            -- enable undercurls
     commentStyle = { italic = true },
@@ -82,7 +83,6 @@ require('kanso').setup({
     keywordStyle = { italic = true},
     statementStyle = {},
     typeStyle = {},
-    disableItalics = false,
     transparent = false,         -- do not set background color
     dimInactive = false,         -- dim inactive window `:h hl-NormalNC`
     terminalColors = true,       -- define vim.g.terminal_color_{0,17}
@@ -235,7 +235,7 @@ require('kanso').setup({
     overrides = function(colors)
         return {
             -- Assign a static color to strings
-            String = { fg = colors.palette.carpYellow, italic = not config.disableItalics },
+            String = { fg = colors.palette.carpYellow, italic = config.italics },
             -- theme colors will update dynamically when you change theme!
             SomePluginHl = { fg = colors.theme.syn.type, bold = true },
         }

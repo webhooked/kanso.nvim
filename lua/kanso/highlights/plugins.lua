@@ -62,7 +62,7 @@ function M.setup(colors, config)
         NvimTreeSymlink = { link = "Type" },
         NvimTreeFolderName = { link = "Directory" },
         NvimTreeExecFile = { fg = theme.syn.string, bold = config.bold },
-        NvimTreeOpenedFile = { fg = theme.syn.special1, italic = not config.disableItalics },
+        NvimTreeOpenedFile = { fg = theme.syn.special1, italic = config.italics },
         NvimTreeWinSeparator = { link = "WinSeparator" },
         NvimTreeWindowPicker = {
             bg = config.transparent and theme.ui.none or theme.ui.bg_m1,
@@ -482,7 +482,7 @@ function M.setup(colors, config)
         NeotestFile = { fg = theme.syn.fun },
         NeotestFocused = { bold = config.bold, underline = true },
         NeotestIndent = { fg = theme.ui.special, bold = config.bold },
-        NeotestMarked = { fg = theme.diag.warning, italic = not config.disableItalics },
+        NeotestMarked = { fg = theme.diag.warning, italic = config.italics },
         NeotestNamespace = { fg = theme.syn.fun },
         NeotestPassed = { fg = theme.diag.ok },
         NeotestRunning = { fg = theme.vcs.changed },

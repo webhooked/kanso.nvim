@@ -9,11 +9,7 @@ function M.setup(colors, config)
 
     return {
         -- *Comment	any comment
-        Comment = vim.tbl_extend(
-            "force",
-            { fg = theme.syn.comment },
-            config.disableItalics and {} or config.commentStyle
-        ),
+        Comment = vim.tbl_extend("force", { fg = theme.syn.comment }, not config.italics and {} or config.commentStyle),
 
         -- *Constant	any constant
         Constant = { fg = theme.syn.constant },
@@ -41,11 +37,7 @@ function M.setup(colors, config)
         --  Operator	"sizeof", "+", "*", etc.
         Operator = { fg = theme.syn.operator },
         --  Keyword	any other keyword
-        Keyword = vim.tbl_extend(
-            "force",
-            { fg = theme.syn.keyword },
-            config.disableItalics and {} or config.keywordStyle
-        ),
+        Keyword = vim.tbl_extend("force", { fg = theme.syn.keyword }, not config.italics and {} or config.keywordStyle),
         --  Exception	try, catch, throw
         Exception = { fg = theme.syn.special2 },
 
@@ -74,7 +66,7 @@ function M.setup(colors, config)
         -- *Underlined	text that stands out, HTML links
         Underlined = { fg = theme.syn.special1, underline = true },
         Bold = { bold = config.bold },
-        Italic = { italic = not config.disableItalics },
+        Italic = { italic = config.italics },
 
         -- *Ignore		left blank, hidden  |hl-Ignore|
         Ignore = { link = "NonText" },

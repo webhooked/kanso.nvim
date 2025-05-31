@@ -505,12 +505,10 @@ function M.setup(colors, config)
         SnacksIndent = { fg = theme.ui.indent_line, nocombine = true },
         SnacksIndentChunk = { fg = theme.ui.active_indent_line, nocombine = true },
         SnacksIndentScope = { fg = theme.ui.active_indent_line, nocombine = true },
-        SnacksPickerInputBorder = {
-            fg = theme.ui.float.bg_border,
-            bg = config.transparent and theme.ui.none or theme.ui.bg,
-        },
-        SnacksPickerInputTitle = { fg = theme.ui.bg, bg = config.transparent and theme.ui.none or theme.ui.bg },
-        SnacksPickerBoxTitle = { fg = theme.ui.bg, bg = config.transparent and theme.ui.none or theme.ui.bg },
+        SnacksPickerListCursorLine = { fg = theme.ui.bg, bg = theme.ui.fg, bold = true },
+        SnacksPickerInputBorder = { fg = theme.ui.none, bg = theme.ui.none },
+        SnacksPickerInputTitle = { fg = theme.ui.fg, bg = config.transparent and theme.ui.none or theme.ui.bg },
+        SnacksPickerBoxTitle = { fg = theme.ui.fg, bg = config.transparent and theme.ui.none or theme.ui.bg },
         SnacksPickerSelected = { fg = theme.ui.bg },
         SnacksPickerPickWinCurrent = {
             fg = theme.ui.fg,

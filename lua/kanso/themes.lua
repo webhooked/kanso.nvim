@@ -100,7 +100,7 @@ return {
             ui = {
                 none = "NONE",
                 fg = palette.inkWhite,
-                fg_dim = palette.oldWhite,
+                fg_dim = palette.inkGray,
                 fg_reverse = palette.zenBlue1,
 
                 bg_dim = palette.zen0,
@@ -136,7 +136,7 @@ return {
                 },
 
                 float = {
-                    fg = palette.oldWhite,
+                    fg = palette.inkGray,
                     bg = palette.zen0,
                     fg_border = palette.zen2,
                     bg_border = palette.zen0,
@@ -190,7 +190,7 @@ return {
                 palette.inkBlue2, -- blue
                 palette.inkPink, -- magenta
                 palette.inkWhite, -- cyan
-                palette.oldWhite, -- white
+                palette.inkGray, -- white
                 palette.inkGray1, -- bright black
                 palette.zenRed, -- bright red
                 palette.inkGreen, -- bright green
@@ -211,7 +211,7 @@ return {
             ui = {
                 none = "NONE",
                 fg = palette.inkWhite,
-                fg_dim = palette.oldWhite,
+                fg_dim = palette.inkGray,
                 fg_reverse = palette.zenBlue1,
 
                 bg_dim = palette.inkBlack0,
@@ -247,7 +247,7 @@ return {
                 },
 
                 float = {
-                    fg = palette.oldWhite,
+                    fg = palette.inkGray,
                     bg = palette.inkBlack0,
                     fg_border = palette.inkBlack2,
                     bg_border = palette.inkBlack0,
@@ -301,7 +301,7 @@ return {
                 palette.inkBlue2, -- blue
                 palette.inkPink, -- magenta
                 palette.inkWhite, -- cyan
-                palette.oldWhite, -- white
+                palette.inkGray, -- white
                 palette.inkGray1, -- bright black
                 palette.zenRed, -- bright red
                 palette.inkGreen, -- bright green
@@ -322,7 +322,7 @@ return {
             ui = {
                 none = "NONE",
                 fg = palette.pearlInk0,
-                fg_dim = palette.pearlInk0,
+                fg_dim = palette.pearlInk1,
                 fg_reverse = palette.pearlGray,
 
                 bg_dim = palette.pearlWhite0,

@@ -257,7 +257,7 @@ local palette_colors = colors.palette
 local theme_colors = colors.theme
 
 -- Get the colors for a specific theme
-local zen_colors = require("kanso.colors").setup({ theme = 'ink' })
+local zen_colors = require("kanso.colors").setup({ theme = 'zen' })
 ```
 
 ## 🧩 Extras

@@ -1,21 +1,21 @@
-# Kanso Zen Alacritty Colors
+# Kanso Mist Alacritty Colors
 
 [colors.primary]
-background = '#090E13'
+background = '#313238'
 foreground = '#C5C9C7'
 
 [colors.normal]
-black = '#090E13'
+black = '#313238'
 red = '#c4746e'
 green = '#8a9a7b'
 yellow = '#c4b28a'
 blue = '#8ba4b0'
 magenta = '#a292a3'
 cyan = '#8ea4a2'
-white = '#c8c093'
+white = '#a4a7a4'
 
 [colors.bright]
-black = '#A4A7A4'
+black = '#5C6066'
 red = '#e46876'
 green = '#87a987'
 yellow = '#e6c384'
@@ -25,7 +25,7 @@ cyan = '#7aa89f'
 white = '#C5C9C7'
 
 [colors.selection]
-background = '#393B44'
+background = '#43464E'
 foreground = '#C5C9C7'
 
 [[colors.indexed_colors]]

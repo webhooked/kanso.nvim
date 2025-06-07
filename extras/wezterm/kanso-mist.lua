@@ -1,31 +1,32 @@
+-- Kanso Mist WezTerm Colors
 local config = {
     force_reverse_video_cursor = true,
     colors = {
         foreground = "#C5C9C7",
-        background = "#090E13",
+        background = "#313238",
 
-        cursor_bg = "#090E13",
-        cursor_fg = "#C5C9C7",
+        cursor_bg = "#C5C9C7",
+        cursor_fg = "#313238",
         cursor_border = "#C5C9C7",
 
         selection_fg = "#C5C9C7",
-        selection_bg = "#23252D",
+        selection_bg = "#43464E",
 
-        scrollbar_thumb = "#23252D",
-        split = "#23252D",
+        scrollbar_thumb = "#43464E",
+        split = "#43464E",
 
         ansi = {
-            "#090E13",
+            "#313238",
             "#C4746E",
             "#8A9A7B",
             "#C4B28A",
             "#8BA4B0",
             "#A292A3",
             "#8EA4A2",
-            "#A4A7A4",
+            "#a4a7a4",
         },
         brights = {
-            "#A4A7A4",
+            "#5C6066",
             "#E46876",
             "#87A987",
             "#E6C384",

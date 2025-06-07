@@ -425,4 +425,115 @@ return {
             },
         }
     end,
+    ---@param palette PaletteColors
+    ---@return ThemeColors
+    mist = function(palette)
+        return {
+            ui = {
+                none = "NONE",
+                fg = palette.mistWhite,
+                fg_dim = palette.mistGray,
+                fg_reverse = palette.zenBlue1,
+
+                bg_dim = palette.mist0,
+
+                bg_m3 = palette.mist0,
+                bg_m2 = palette.mist0,
+                bg_m1 = palette.mist0,
+                bg = palette.mist0,
+                bg_p1 = palette.mist2,
+                bg_p2 = palette.mist2,
+
+                special = palette.mistGray3,
+                indent_line = palette.mistGray3,
+                active_indent_line = palette.mistGray3,
+                whitespace = palette.mist3,
+                nontext = palette.mistAsh,
+
+                bg_visual = palette.mist2,
+                bg_search = palette.zenBlue2,
+
+                cursor_line_nr_foreground = palette.mistGray2,
+                cursor_line_nr_active_foreground = palette.fujiWhite,
+                cursor_bg = palette.fujiWhite,
+                cursor_fg = palette.mist0,
+
+                pmenu = {
+                    fg = palette.fujiWhite,
+                    fg_sel = "NONE",
+                    bg = palette.mist0,
+                    bg_sel = palette.mist2,
+                    bg_thumb = palette.mist2,
+                    bg_sbar = palette.mist0,
+                },
+
+                float = {
+                    fg = palette.mistGray,
+                    bg = palette.mist0,
+                    fg_border = palette.mist2,
+                    bg_border = palette.mist0,
+                },
+            },
+            syn = {
+                string = palette.mistGreen2,
+                variable = "NONE",
+                number = palette.mistPink,
+                constant = palette.mistOrange,
+                identifier = palette.mistViolet,
+                parameter = palette.mistGray1,
+                fun = palette.mistBlue2,
+                statement = palette.mistViolet,
+                keyword = palette.mistViolet,
+                operator = palette.mistGray1,
+                preproc = palette.mistGray1,
+                type = palette.mistAqua,
+                regex = palette.mistRed,
+                deprecated = palette.katanaGray,
+                punct = palette.mistGray1,
+                comment = palette.mistGray2,
+                special1 = palette.mistYellow,
+                special2 = palette.mistViolet,
+                special3 = palette.mistViolet,
+            },
+            diag = {
+                error = palette.samuraiRed,
+                ok = palette.springGreen,
+                warning = palette.roninYellow,
+                info = palette.inkBlue,
+                hint = palette.zenAqua1,
+            },
+            diff = {
+                add = palette.winterGreen,
+                delete = palette.winterRed,
+                change = palette.winterBlue,
+                text = palette.winterYellow,
+            },
+            vcs = {
+                added = palette.autumnGreen,
+                removed = palette.autumnRed,
+                changed = palette.autumnYellow,
+                untracked = palette.mistGray2,
+            },
+            term = {
+                palette.mist0, -- black
+                palette.mistRed, -- red
+                palette.mistGreen2, -- green
+                palette.mistYellow, -- yellow
+                palette.mistBlue2, -- blue
+                palette.mistPink, -- magenta
+                palette.mistWhite, -- cyan
+                palette.mistGray, -- white
+                palette.mistGray1, -- bright black
+                palette.zenRed, -- bright red
+                palette.mistGreen, -- bright green
+                palette.carpYellow, -- bright yellow
+                palette.springBlue, -- bright blue
+                palette.springViolet1, -- bright magenta
+                palette.zenAqua2, -- bright cyan
+                palette.mistWhite, -- bright white
+                palette.mistOrange, -- extended color 1
+                palette.mistOrange2, -- extended color 2
+            },
+        }
+    end,
 }

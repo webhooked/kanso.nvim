@@ -4,8 +4,8 @@ local palette = {
     -- Bg Shades
     zen0 = "#090E13",
     zen1 = "#1C1E25",
-    zen2 = "#24262D",
-    zen3 = "#393B42",
+    zen2 = "#23252D",
+    zen3 = "#393B44",
 
     -- Popup and Floats
     zenBlue1 = "#223249",
@@ -42,8 +42,8 @@ local palette = {
 
     inkBlack0 = "#14171d",
     inkBlack1 = "#1f1f26",
-    inkBlack2 = "#24262D",
-    inkBlack3 = "#393B42",
+    inkBlack2 = "#23252D",
+    inkBlack3 = "#393B44",
     inkBlack4 = "#4b4e57",
 
     inkWhite = "#C5C9C7",
@@ -65,7 +65,31 @@ local palette = {
     inkYellow = "#c4b28a", --"#a99c8b",
     -- "#8a9aa3",
 
-    pearlInk0 = "#24262D",
+    -- Mist Shades
+    mist0 = "#313238",
+    mist1 = "#2a2c35",
+    mist2 = "#43464E",
+    mist3 = "#5C6066",
+
+    mistWhite = "#C5C9C7",
+    mistGreen = "#87a987",
+    mistGreen2 = "#8a9a7b",
+    mistPink = "#a292a3",
+    mistOrange = "#b6927b",
+    mistOrange2 = "#b98d7b",
+    mistGray = "#A4A7A4",
+    mistGray1 = "#909398",
+    mistGray2 = "#75797f",
+    mistGray3 = "#5C6066",
+    mistBlue2 = "#8ba4b0",
+    mistViolet = "#8992a7",
+    mistRed = "#c4746e",
+    mistAqua = "#8ea4a2",
+    mistAsh = "#5C6066",
+    mistTeal = "#949fb5",
+    mistYellow = "#c4b28a",
+
+    pearlInk0 = "#23252D",
     pearlInk1 = "#545464",
     pearlInk2 = "#43436c",
     pearlGray = "#e2e1df",

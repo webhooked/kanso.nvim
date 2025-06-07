@@ -25,7 +25,7 @@ cyan = '#7aa89f'
 white = '#C5C9C7'
 
 [colors.selection]
-background = '#393B42'
+background = '#393B44'
 foreground = '#C5C9C7'
 
 [[colors.indexed_colors]]

@@ -37,9 +37,9 @@ sep_left = { open = "", close = "" }
 sep_right = { open = "", close = "" }
 overall = { fg = "#43436c", bg = "#f2f1ef" }
 
-progress_label = { fg = "#4d699b", bg = "#24262D", bold = true }
-progress_normal = { fg = "#24262D", bg = "#f2f1ef" }
-progress_error = { fg = "#24262D", bg = "#f2f1ef" }
+progress_label = { fg = "#4d699b", bg = "#23252D", bold = true }
+progress_normal = { fg = "#23252D", bg = "#f2f1ef" }
+progress_error = { fg = "#23252D", bg = "#f2f1ef" }
 
 perm_type = { fg = "#6f894e" }
 perm_read = { fg = "#77713f" }

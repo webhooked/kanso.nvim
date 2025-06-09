@@ -96,7 +96,7 @@ require('kanso').setup({
     theme = "zen",              -- Load "zen" theme
     background = {               -- map the value of 'background' option to a theme
         dark = "zen",           -- try "ink" !
-        light = "pearl"
+        light = "pearl"         -- try "mist" !
     },
 })
 
@@ -122,10 +122,11 @@ vim.cmd("colorscheme kanso")
 
 ## 🎨 Themes
 
-Kansō comes in three beautiful variants:
+Kansō comes in four beautiful variants:
 
 - `Zen` (Dark)
 - `Ink` (Dark)
+- `Mist` (Dark)
 - `Pearl` (Light)
 
 <div>
@@ -137,6 +138,11 @@ Kansō comes in three beautiful variants:
   <h3>✧ Ink ✧</h3>
   <p>Balanced theme with elegant contrast.</p>
   <img src="kanso_ink.png" width="900">
+  <br/><br/>
+
+  <h3>✧ Mist ✧</h3>
+  <p>Soft & muted dark theme with gentle contrast.</p>
+  <img src="kanso_mist.png" width="900">
   <br/><br/>
 
   <h3>✧ Pearl ✧</h3>
@@ -158,7 +164,8 @@ Themes can be changed in three ways:
 
 ```lua
 vim.cmd("colorscheme kanso-zen")
-vim.cmd("colorscheme kanso-kage")
+vim.cmd("colorscheme kanso-ink")
+vim.cmd("colorscheme kanso-mist")
 vim.cmd("colorscheme kanso-pearl")
 ```
 

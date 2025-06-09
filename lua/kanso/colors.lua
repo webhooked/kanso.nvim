@@ -4,7 +4,7 @@ local palette = {
     -- Bg Shades
     zen0 = "#090E13",
     zen1 = "#1C1E25",
-    zen2 = "#23252D",
+    zen2 = "#24262D",
     zen3 = "#393B44",
 
     -- Popup and Floats
@@ -42,7 +42,7 @@ local palette = {
 
     inkBlack0 = "#14171d",
     inkBlack1 = "#1f1f26",
-    inkBlack2 = "#23252D",
+    inkBlack2 = "#24262D",
     inkBlack3 = "#393B44",
     inkBlack4 = "#4b4e57",
 
@@ -66,7 +66,7 @@ local palette = {
     -- "#8a9aa3",
 
     -- Mist Shades
-    mist0 = "#23252D",
+    mist0 = "#24262D",
     mist1 = "#2a2c35",
     mist2 = "#43464E",
     mist3 = "#5C6066",
@@ -89,7 +89,7 @@ local palette = {
     mistTeal = "#949fb5",
     mistYellow = "#c4b28a",
 
-    pearlInk0 = "#23252D",
+    pearlInk0 = "#24262D",
     pearlInk1 = "#545464",
     pearlInk2 = "#43436c",
     pearlGray = "#e2e1df",

@@ -1,11 +1,11 @@
 # Kanso Mist Alacritty Colors
 
 [colors.primary]
-background = '#23252D'
+background = '#24262D'
 foreground = '#C5C9C7'
 
 [colors.normal]
-black = '#23252D'
+black = '#24262D'
 red = '#c4746e'
 green = '#8a9a7b'
 yellow = '#c4b28a'

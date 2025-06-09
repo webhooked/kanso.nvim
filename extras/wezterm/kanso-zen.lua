@@ -9,10 +9,10 @@ local config = {
         cursor_border = "#C5C9C7",
 
         selection_fg = "#C5C9C7",
-        selection_bg = "#24262D",
+        selection_bg = "#22262D",
 
-        scrollbar_thumb = "#24262D",
-        split = "#24262D",
+        scrollbar_thumb = "#22262D",
+        split = "#22262D",
 
         ansi = {
             "#090E13",

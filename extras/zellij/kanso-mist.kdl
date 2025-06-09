@@ -1,6 +1,6 @@
 themes {
   kanso-mist {
-    bg		"#24262D"
+    bg		"#22262D"
     fg		"#C5C9C7"
     red		"#C4746E"
     green	"#8A9A7B"
@@ -9,7 +9,7 @@ themes {
     magenta "#A292A3"
     orange	"#B98D7B"
     cyan	"#8EA4A2"
-    black	"#24262D"
+    black	"#22262D"
     white	"#C5C9C7"
   }
 }

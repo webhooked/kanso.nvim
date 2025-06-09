@@ -3,10 +3,10 @@ local config = {
     force_reverse_video_cursor = true,
     colors = {
         foreground = "#C5C9C7",
-        background = "#24262D",
+        background = "#22262D",
 
         cursor_bg = "#C5C9C7",
-        cursor_fg = "#24262D",
+        cursor_fg = "#22262D",
         cursor_border = "#C5C9C7",
 
         selection_fg = "#C5C9C7",
@@ -16,7 +16,7 @@ local config = {
         split = "#43464E",
 
         ansi = {
-            "#24262D",
+            "#22262D",
             "#C4746E",
             "#8A9A7B",
             "#C4B28A",

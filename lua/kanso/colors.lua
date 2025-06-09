@@ -66,7 +66,7 @@ local palette = {
     -- "#8a9aa3",
 
     -- Mist Shades
-    mist0 = "#313238",
+    mist0 = "#23252D",
     mist1 = "#2a2c35",
     mist2 = "#43464E",
     mist3 = "#5C6066",

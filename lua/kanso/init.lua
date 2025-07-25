@@ -25,7 +25,7 @@ M.config = {
         return {}
     end,
     ---@type { dark: string, light: string }
-    background = { dark = "ink", light = "ink" },
+    background = { dark = "ink", light = "pearl" },
     theme = "ink",
     ---@type { dark: "default"|"contrast", light: "default"|"contrast" }|"default"|"contrast"
     foreground = "default",

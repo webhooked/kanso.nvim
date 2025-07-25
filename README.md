@@ -94,10 +94,9 @@ require('kanso').setup({
     overrides = function(colors) -- add/modify highlights
         return {}
     end,
-    theme = "ink",              -- Load "ink" theme  
     background = {               -- map the value of 'background' option to a theme
         dark = "ink",           -- try "zen" !
-        light = "ink"           -- try "pearl" or "mist" !
+        light = "pearl"           -- try "mist" !
     },
     foreground = "default",      -- "default" or "contrast" (can also be a table like background)
 })

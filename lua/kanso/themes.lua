@@ -99,108 +99,108 @@ return {
         return {
             ui = {
                 none = "NONE",
-                fg = palette.inkWhite,
-                fg_dim = palette.inkGray,
-                fg_reverse = palette.zenBlue1,
+                fg = palette.fg,
+                fg_dim = palette.gray2,
+                fg_reverse = palette.altBlue1,
 
-                bg_dim = palette.zen0,
+                bg_dim = palette.zenBg0,
 
-                bg_m3 = palette.zen0,
-                bg_m2 = palette.zen0,
-                bg_m1 = palette.zen0,
-                bg = palette.zen0,
-                bg_p1 = palette.zen1,
-                bg_p2 = palette.zen2,
+                bg_m3 = palette.zenBg0,
+                bg_m2 = palette.zenBg0,
+                bg_m1 = palette.zenBg0,
+                bg = palette.zenBg0,
+                bg_p1 = palette.zenBg1,
+                bg_p2 = palette.zenBg2,
 
-                special = palette.inkGray3,
-                indent_line = palette.inkBlack2,
-                active_indent_line = palette.inkBlack3,
-                whitespace = palette.inkBlack3,
-                nontext = palette.inkAsh,
+                special = palette.gray5,
+                indent_line = palette.inkBg2,
+                active_indent_line = palette.inkBg3,
+                whitespace = palette.inkBg3,
+                nontext = palette.gray5,
 
-                bg_visual = palette.inkBlack3,
-                bg_search = palette.zenBlue2,
+                bg_visual = palette.inkBg3,
+                bg_search = palette.altBlue2,
 
-                cursor_line_nr_foreground = palette.inkGray3,
-                cursor_line_nr_active_foreground = palette.fujiWhite,
-                cursor_bg = palette.fujiWhite,
-                cursor_fg = palette.zen0,
+                cursor_line_nr_foreground = palette.gray5,
+                cursor_line_nr_active_foreground = palette.fg2,
+                cursor_bg = palette.fg2,
+                cursor_fg = palette.zenBg0,
 
                 pmenu = {
-                    fg = palette.fujiWhite,
+                    fg = palette.fg2,
                     fg_sel = "NONE",
-                    bg = palette.zen0,
-                    bg_sel = palette.inkBlack3,
-                    bg_thumb = palette.inkBlack3,
-                    bg_sbar = palette.zen0,
+                    bg = palette.zenBg0,
+                    bg_sel = palette.inkBg3,
+                    bg_thumb = palette.inkBg3,
+                    bg_sbar = palette.zenBg0,
                 },
 
                 float = {
-                    fg = palette.inkGray,
-                    bg = palette.zen0,
-                    fg_border = palette.zen2,
-                    bg_border = palette.zen0,
+                    fg = palette.gray2,
+                    bg = palette.zenBg0,
+                    fg_border = palette.zenBg2,
+                    bg_border = palette.zenBg0,
                 },
             },
             syn = {
-                string = palette.inkGreen2,
+                string = palette.green3,
                 variable = "NONE",
-                number = palette.inkPink,
-                constant = palette.inkOrange,
-                identifier = palette.inkViolet,
-                parameter = palette.inkGray1,
-                fun = palette.inkBlue2,
-                statement = palette.inkViolet,
-                keyword = palette.inkViolet,
-                operator = palette.inkGray1,
-                preproc = palette.inkGray1,
-                type = palette.inkAqua,
-                regex = palette.inkRed,
-                deprecated = palette.katanaGray,
-                punct = palette.inkGray1,
-                comment = palette.inkGray2,
-                special1 = palette.inkYellow,
-                special2 = palette.inkViolet,
-                special3 = palette.inkViolet,
+                number = palette.pink,
+                constant = palette.orange,
+                identifier = palette.violet2,
+                parameter = palette.gray3,
+                fun = palette.blue3,
+                statement = palette.violet2,
+                keyword = palette.violet2,
+                operator = palette.gray3,
+                preproc = palette.gray3,
+                type = palette.aqua,
+                regex = palette.red3,
+                deprecated = palette.gray,
+                punct = palette.gray3,
+                comment = palette.gray4,
+                special1 = palette.yellow3,
+                special2 = palette.violet2,
+                special3 = palette.violet2,
             },
             diag = {
-                error = palette.samuraiRed,
-                ok = palette.springGreen,
-                warning = palette.roninYellow,
-                info = palette.inkBlue,
-                hint = palette.zenAqua1,
+                error = palette.red,
+                ok = palette.green,
+                warning = palette.yellow,
+                info = palette.blue2,
+                hint = palette.green4,
             },
             diff = {
-                add = palette.winterGreen,
-                delete = palette.winterRed,
-                change = palette.winterBlue,
-                text = palette.winterYellow,
+                add = palette.diffGreen,
+                delete = palette.diffRed,
+                change = palette.diffBlue,
+                text = palette.diffYellow,
             },
             vcs = {
-                added = palette.autumnGreen,
-                removed = palette.autumnRed,
-                changed = palette.autumnYellow,
-                untracked = palette.inkGray2,
+                added = palette.gitGreen,
+                removed = palette.gitRed,
+                changed = palette.gitYellow,
+                untracked = palette.gray4,
             },
             term = {
-                palette.zen0, -- black
-                palette.inkRed, -- red
-                palette.inkGreen2, -- green
-                palette.inkYellow, -- yellow
-                palette.inkBlue2, -- blue
-                palette.inkPink, -- magenta
-                palette.inkWhite, -- cyan
-                palette.inkGray, -- white
-                palette.inkGray1, -- bright black
-                palette.zenRed, -- bright red
-                palette.inkGreen, -- bright green
-                palette.carpYellow, -- bright yellow
-                palette.springBlue, -- bright blue
-                palette.springViolet1, -- bright magenta
-                palette.zenAqua2, -- bright cyan
-                palette.inkWhite, -- bright white
-                palette.inkOrange, -- extended color 1
-                palette.inkOrange2, -- extended color 2
+                palette.zenBg0, -- black
+                palette.red3, -- red
+                palette.green3, -- green
+                palette.yellow3, -- yellow
+                palette.blue3, -- blue
+                palette.pink, -- magenta
+                palette.fg, -- cyan
+                palette.gray2, -- white
+                palette.gray3, -- bright black
+                palette.red2, -- bright red
+                palette.green2, -- bright green
+                palette.yellow2, -- bright yellow
+                palette.blue, -- bright blue
+                palette.violet, -- bright magenta
+                palette.green5, -- bright cyan
+                palette.fg, -- bright white
+                palette.orange, -- extended color 1
+                palette.orange2, -- extended color 2
             },
         }
     end,
@@ -210,108 +210,108 @@ return {
         return {
             ui = {
                 none = "NONE",
-                fg = palette.inkWhite,
-                fg_dim = palette.inkGray,
-                fg_reverse = palette.zenBlue1,
+                fg = palette.fg,
+                fg_dim = palette.gray2,
+                fg_reverse = palette.altBlue1,
 
-                bg_dim = palette.inkBlack0,
+                bg_dim = palette.inkBg0,
 
-                bg_m3 = palette.inkBlack0,
-                bg_m2 = palette.inkBlack0,
-                bg_m1 = palette.inkBlack0,
-                bg = palette.inkBlack0,
-                bg_p1 = palette.inkBlack1,
-                bg_p2 = palette.inkBlack2,
+                bg_m3 = palette.inkBg0,
+                bg_m2 = palette.inkBg0,
+                bg_m1 = palette.inkBg0,
+                bg = palette.inkBg0,
+                bg_p1 = palette.inkBg1,
+                bg_p2 = palette.inkBg2,
 
-                special = palette.inkGray3,
-                indent_line = palette.inkBlack2,
-                active_indent_line = palette.inkBlack3,
-                whitespace = palette.inkBlack4,
-                nontext = palette.inkAsh,
+                special = palette.gray5,
+                indent_line = palette.inkBg2,
+                active_indent_line = palette.inkBg3,
+                whitespace = palette.inkBg4,
+                nontext = palette.gray5,
 
-                bg_visual = palette.inkBlack3,
-                bg_search = palette.zenBlue2,
+                bg_visual = palette.inkBg3,
+                bg_search = palette.altBlue2,
 
-                cursor_line_nr_foreground = palette.inkGray3,
-                cursor_line_nr_active_foreground = palette.fujiWhite,
-                cursor_bg = palette.fujiWhite,
-                cursor_fg = palette.inkBlack0,
+                cursor_line_nr_foreground = palette.gray5,
+                cursor_line_nr_active_foreground = palette.fg2,
+                cursor_bg = palette.fg2,
+                cursor_fg = palette.inkBg0,
 
                 pmenu = {
-                    fg = palette.fujiWhite,
+                    fg = palette.fg2,
                     fg_sel = "NONE",
-                    bg = palette.inkBlack0,
-                    bg_sel = palette.inkBlack3,
-                    bg_thumb = palette.inkBlack3,
-                    bg_sbar = palette.inkBlack0,
+                    bg = palette.inkBg0,
+                    bg_sel = palette.inkBg3,
+                    bg_thumb = palette.inkBg3,
+                    bg_sbar = palette.inkBg0,
                 },
 
                 float = {
-                    fg = palette.inkGray,
-                    bg = palette.inkBlack0,
-                    fg_border = palette.inkBlack2,
-                    bg_border = palette.inkBlack0,
+                    fg = palette.gray2,
+                    bg = palette.inkBg0,
+                    fg_border = palette.inkBg2,
+                    bg_border = palette.inkBg0,
                 },
             },
             syn = {
-                string = palette.inkGreen2,
+                string = palette.green3,
                 variable = "NONE",
-                number = palette.inkPink,
-                constant = palette.inkOrange,
-                identifier = palette.inkViolet,
-                parameter = palette.inkGray1,
-                fun = palette.inkBlue2,
-                statement = palette.inkViolet,
-                keyword = palette.inkViolet,
-                operator = palette.inkGray1,
-                preproc = palette.inkGray1,
-                type = palette.inkAqua,
-                regex = palette.inkRed,
-                deprecated = palette.katanaGray,
-                punct = palette.inkGray1,
-                comment = palette.inkGray2,
-                special1 = palette.inkYellow,
-                special2 = palette.inkViolet,
-                special3 = palette.inkViolet,
+                number = palette.pink,
+                constant = palette.orange,
+                identifier = palette.violet2,
+                parameter = palette.gray3,
+                fun = palette.blue3,
+                statement = palette.violet2,
+                keyword = palette.violet2,
+                operator = palette.gray3,
+                preproc = palette.gray3,
+                type = palette.aqua,
+                regex = palette.red3,
+                deprecated = palette.gray,
+                punct = palette.gray3,
+                comment = palette.gray4,
+                special1 = palette.yellow3,
+                special2 = palette.violet2,
+                special3 = palette.violet2,
             },
             diag = {
-                error = palette.samuraiRed,
-                ok = palette.springGreen,
-                warning = palette.roninYellow,
-                info = palette.inkBlue,
-                hint = palette.zenAqua1,
+                error = palette.red,
+                ok = palette.green,
+                warning = palette.yellow,
+                info = palette.blue2,
+                hint = palette.green4,
             },
             diff = {
-                add = palette.winterGreen,
-                delete = palette.winterRed,
-                change = palette.winterBlue,
-                text = palette.winterYellow,
+                add = palette.diffGreen,
+                delete = palette.diffRed,
+                change = palette.diffBlue,
+                text = palette.diffYellow,
             },
             vcs = {
-                added = palette.autumnGreen,
-                removed = palette.autumnRed,
-                changed = palette.autumnYellow,
-                untracked = palette.inkGray2,
+                added = palette.gitGreen,
+                removed = palette.gitRed,
+                changed = palette.gitYellow,
+                untracked = palette.gray4,
             },
             term = {
-                palette.inkBlack0, -- black
-                palette.inkRed, -- red
-                palette.inkGreen2, -- green
-                palette.inkYellow, -- yellow
-                palette.inkBlue2, -- blue
-                palette.inkPink, -- magenta
-                palette.inkWhite, -- cyan
-                palette.inkGray, -- white
-                palette.inkGray1, -- bright black
-                palette.zenRed, -- bright red
-                palette.inkGreen, -- bright green
-                palette.carpYellow, -- bright yellow
-                palette.springBlue, -- bright blue
-                palette.springViolet1, -- bright magenta
-                palette.zenAqua2, -- bright cyan
-                palette.inkWhite, -- bright white
-                palette.inkOrange, -- extended color 1
-                palette.inkOrange2, -- extended color 2
+                palette.inkBg0, -- black
+                palette.red3, -- red
+                palette.green3, -- green
+                palette.yellow3, -- yellow
+                palette.blue3, -- blue
+                palette.pink, -- magenta
+                palette.fg, -- cyan
+                palette.gray2, -- white
+                palette.gray3, -- bright black
+                palette.red2, -- bright red
+                palette.green2, -- bright green
+                palette.yellow2, -- bright yellow
+                palette.blue, -- bright blue
+                palette.violet, -- bright magenta
+                palette.green5, -- bright cyan
+                palette.fg, -- bright white
+                palette.orange, -- extended color 1
+                palette.orange2, -- extended color 2
             },
         }
     end,
@@ -321,8 +321,8 @@ return {
         return {
             ui = {
                 none = "NONE",
-                fg = palette.pearlInk0,
-                fg_dim = palette.pearlInk1,
+                fg = palette.pearlBlack0,
+                fg_dim = palette.pearlBlack1,
                 fg_reverse = palette.pearlGray,
 
                 bg_dim = palette.pearlWhite0,
@@ -344,12 +344,12 @@ return {
                 bg_search = palette.pearlBlue2,
 
                 cursor_line_nr_foreground = palette.pearlGray4,
-                cursor_line_nr_active_foreground = palette.inkBlack2,
-                cursor_bg = palette.fujiWhite,
-                cursor_fg = palette.inkBlack2,
+                cursor_line_nr_active_foreground = palette.inkBg2,
+                cursor_bg = palette.fg2,
+                cursor_fg = palette.inkBg2,
 
                 pmenu = {
-                    fg = palette.pearlInk2,
+                    fg = palette.pearlBlack2,
                     fg_sel = "NONE", -- This is important to make highlights pass-through
                     bg = palette.pearlWhite0,
                     bg_sel = palette.pearlWhite2,
@@ -357,7 +357,7 @@ return {
                     bg_sbar = palette.pearlWhite0,
                 },
                 float = {
-                    fg = palette.pearlInk2,
+                    fg = palette.pearlBlack2,
                     bg = palette.pearlWhite0,
                     fg_border = palette.pearlWhite2,
                     bg_border = palette.pearlWhite0,
@@ -404,14 +404,14 @@ return {
                 hint = palette.pearlAqua2,
             },
             term = {
-                palette.inkBlack2, -- black
+                palette.inkBg2, -- black
                 palette.pearlRed, -- red
                 palette.pearlGreen, -- green
                 palette.pearlYellow, -- yellow
                 palette.pearlBlue4, -- blue
                 palette.pearlPink, -- magenta
                 palette.pearlAqua, -- cyan
-                palette.pearlInk0, -- white
+                palette.pearlBlack0, -- white
                 palette.pearlGray3, -- bright black
                 palette.pearlRed2, -- bright red
                 palette.pearlGreen2, -- bright green
@@ -419,7 +419,7 @@ return {
                 palette.pearlTeal2, -- bright blue
                 palette.pearlViolet4, -- bright magenta
                 palette.pearlAqua2, -- bright cyan
-                palette.pearlInk2, -- bright white
+                palette.pearlBlack2, -- bright white
                 palette.pearlOrange2, -- extended color 1
                 palette.pearlRed3, -- extended color 2
             },
@@ -431,108 +431,108 @@ return {
         return {
             ui = {
                 none = "NONE",
-                fg = palette.mistWhite,
-                fg_dim = palette.mistGray,
-                fg_reverse = palette.zenBlue1,
+                fg = palette.fg,
+                fg_dim = palette.gray2,
+                fg_reverse = palette.altBlue1,
 
-                bg_dim = palette.mist0,
+                bg_dim = palette.mistBg0,
 
-                bg_m3 = palette.mist0,
-                bg_m2 = palette.mist0,
-                bg_m1 = palette.mist0,
-                bg = palette.mist0,
-                bg_p1 = palette.mist2,
-                bg_p2 = palette.mist2,
+                bg_m3 = palette.mistBg0,
+                bg_m2 = palette.mistBg0,
+                bg_m1 = palette.mistBg0,
+                bg = palette.mistBg0,
+                bg_p1 = palette.mistBg2,
+                bg_p2 = palette.mistBg2,
 
-                special = palette.mistGray3,
-                indent_line = palette.mistGray3,
-                active_indent_line = palette.mistGray3,
-                whitespace = palette.mist3,
-                nontext = palette.mistAsh,
+                special = palette.gray5,
+                indent_line = palette.gray5,
+                active_indent_line = palette.gray5,
+                whitespace = palette.mistBg3,
+                nontext = palette.gray5,
 
-                bg_visual = palette.mist2,
-                bg_search = palette.zenBlue2,
+                bg_visual = palette.mistBg2,
+                bg_search = palette.altBlue2,
 
-                cursor_line_nr_foreground = palette.mistGray2,
-                cursor_line_nr_active_foreground = palette.fujiWhite,
-                cursor_bg = palette.fujiWhite,
-                cursor_fg = palette.mist0,
+                cursor_line_nr_foreground = palette.gray4,
+                cursor_line_nr_active_foreground = palette.fg2,
+                cursor_bg = palette.fg2,
+                cursor_fg = palette.mistBg0,
 
                 pmenu = {
-                    fg = palette.fujiWhite,
+                    fg = palette.fg2,
                     fg_sel = "NONE",
-                    bg = palette.mist0,
-                    bg_sel = palette.mist2,
-                    bg_thumb = palette.mist2,
-                    bg_sbar = palette.mist0,
+                    bg = palette.mistBg0,
+                    bg_sel = palette.mistBg2,
+                    bg_thumb = palette.mistBg2,
+                    bg_sbar = palette.mistBg0,
                 },
 
                 float = {
-                    fg = palette.mistGray,
-                    bg = palette.mist0,
-                    fg_border = palette.mist2,
-                    bg_border = palette.mist0,
+                    fg = palette.gray2,
+                    bg = palette.mistBg0,
+                    fg_border = palette.mistBg2,
+                    bg_border = palette.mistBg0,
                 },
             },
             syn = {
-                string = palette.mistGreen2,
+                string = palette.green3,
                 variable = "NONE",
-                number = palette.mistPink,
-                constant = palette.mistOrange,
-                identifier = palette.mistViolet,
-                parameter = palette.mistGray1,
-                fun = palette.mistBlue2,
-                statement = palette.mistViolet,
-                keyword = palette.mistViolet,
-                operator = palette.mistGray1,
-                preproc = palette.mistGray1,
-                type = palette.mistAqua,
-                regex = palette.mistRed,
-                deprecated = palette.katanaGray,
-                punct = palette.mistGray1,
-                comment = palette.mistGray2,
-                special1 = palette.mistYellow,
-                special2 = palette.mistViolet,
-                special3 = palette.mistViolet,
+                number = palette.pink,
+                constant = palette.orange,
+                identifier = palette.violet2,
+                parameter = palette.gray3,
+                fun = palette.blue3,
+                statement = palette.violet2,
+                keyword = palette.violet2,
+                operator = palette.gray3,
+                preproc = palette.gray3,
+                type = palette.aqua,
+                regex = palette.red3,
+                deprecated = palette.gray,
+                punct = palette.gray3,
+                comment = palette.gray4,
+                special1 = palette.yellow3,
+                special2 = palette.violet2,
+                special3 = palette.violet2,
             },
             diag = {
-                error = palette.samuraiRed,
-                ok = palette.springGreen,
-                warning = palette.roninYellow,
-                info = palette.inkBlue,
-                hint = palette.zenAqua1,
+                error = palette.red,
+                ok = palette.green,
+                warning = palette.yellow,
+                info = palette.blue2,
+                hint = palette.green4,
             },
             diff = {
-                add = palette.winterGreen,
-                delete = palette.winterRed,
-                change = palette.winterBlue,
-                text = palette.winterYellow,
+                add = palette.diffGreen,
+                delete = palette.diffRed,
+                change = palette.diffBlue,
+                text = palette.diffYellow,
             },
             vcs = {
                 added = palette.autumnGreen,
                 removed = palette.autumnRed,
                 changed = palette.autumnYellow,
-                untracked = palette.mistGray2,
+                untracked = palette.gray4,
             },
             term = {
-                palette.mist0, -- black
-                palette.mistRed, -- red
-                palette.mistGreen2, -- green
-                palette.mistYellow, -- yellow
-                palette.mistBlue2, -- blue
-                palette.mistPink, -- magenta
-                palette.mistWhite, -- cyan
-                palette.mistGray, -- white
-                palette.mistGray1, -- bright black
-                palette.zenRed, -- bright red
-                palette.mistGreen, -- bright green
-                palette.carpYellow, -- bright yellow
-                palette.springBlue, -- bright blue
-                palette.springViolet1, -- bright magenta
-                palette.zenAqua2, -- bright cyan
-                palette.mistWhite, -- bright white
-                palette.mistOrange, -- extended color 1
-                palette.mistOrange2, -- extended color 2
+                palette.mistBg0, -- black
+                palette.red3, -- red
+                palette.green3, -- green
+                palette.yellow3, -- yellow
+                palette.blue3, -- blue
+                palette.pink, -- magenta
+                palette.fg, -- cyan
+                palette.gray2, -- white
+                palette.gray3, -- bright black
+                palette.red2, -- bright red
+                palette.green2, -- bright green
+                palette.yellow2, -- bright yellow
+                palette.blue, -- bright blue
+                palette.violet, -- bright magenta
+                palette.green5, -- bright cyan
+                palette.fg, -- bright white
+                palette.orange, -- extended color 1
+                palette.orange2, -- extended color 2
             },
         }
     end,

@@ -57,6 +57,30 @@ local palette = {
     orange2 = "#b98d7b",
     aqua = "#8ea4a2",
 
+    -- Contrast variants (20% more saturation)
+    redContrast = "#C93134",
+    red2Contrast = "#ED5965",
+    red3Contrast = "#CA675F",
+    yellowContrast = "#E59F49",
+    yellow2Contrast = "#EDC272",
+    yellow3Contrast = "#CAAC7A",
+    greenContrast = "#8FC055",
+    green2Contrast = "#7CAF7C",
+    green3Contrast = "#7F9F6E",
+    green4Contrast = "#5B9A82",
+    green5Contrast = "#6BAE97",
+    blueContrast = "#6EBBD4",
+    blue2Contrast = "#568B8F",
+    blue3Contrast = "#7EAABA",
+    blue4Contrast = "#81AAA9",
+    violetContrast = "#8A88B0",
+    violet2Contrast = "#7E91AF",
+    violet3Contrast = "#8A9FBE",
+    pinkContrast = "#A08AA2",
+    orangeContrast = "#BC8A6C",
+    orange2Contrast = "#BF856B",
+    aquaContrast = "#81AAA9",
+
     -- Fg and Comments
     fg = "#C5C9C7",
     fg2 = "#f2f1ef",
@@ -108,6 +132,30 @@ local palette = {
     pearlTeal2 = "#6693bf",
     pearlTeal3 = "#5a7785",
     pearlCyan = "#d7e3d8",
+
+    -- Pearl contrast variants (40% more saturation)
+    pearlGreenContrast = "#5E8F2F",
+    pearlGreen2Contrast = "#5B9945",
+    pearlGreen3Contrast = "#A8DA9B",
+    pearlPinkContrast = "#C04062",
+    pearlOrangeContrast = "#E05700",
+    pearlOrange2Contrast = "#FF7700",
+    pearlYellowContrast = "#656720",
+    pearlYellow2Contrast = "#72612B",
+    pearlYellow3Contrast = "#F28C00",
+    pearlYellow4Contrast = "#FFD56D",
+    pearlRedContrast = "#D72436",
+    pearlRed2Contrast = "#E42D2C",
+    pearlRed3Contrast = "#F50000",
+    pearlRed4Contrast = "#E4977B",
+    pearlAquaContrast = "#3E8366",
+    pearlAqua2Contrast = "#428F6A",
+    pearlTeal1Contrast = "#2E96B0",
+    pearlTeal2Contrast = "#469FD3",
+    pearlTeal3Contrast = "#3D8077",
+    pearlBlue4Contrast = "#2A73B1",
+    pearlBlue5Contrast = "#3E56B8",
+    pearlViolet4Contrast = "#44418F",
 }
 
 local M = {}
@@ -117,7 +165,7 @@ local M = {}
 ---     Defaults to KansoConfig.colors.
 ---   - theme: Use selected theme. Defaults to KansoConfig.theme
 ---     according to the value of 'background' option.
----@param opts? { colors?: table, theme?: string }
+---@param opts? { colors?: table, theme?: string, foreground?: "default"|"contrast" }
 ---@return { theme: ThemeColors, palette: PaletteColors}
 function M.setup(opts)
     opts = opts or {}
@@ -134,7 +182,14 @@ function M.setup(opts)
     local updated_palette_colors = vim.tbl_extend("force", palette, override_colors.palette or {})
 
     -- Generate the theme according to the updated palette colors
-    local theme_colors = require("kanso.themes")[theme](updated_palette_colors)
+    local kanso_config = require("kanso").config
+    local bg_mode = vim.o.background
+    local foreground = opts.foreground
+        or (type(kanso_config.foreground) == "table" and kanso_config.foreground[bg_mode])
+        or kanso_config.foreground
+        or "default"
+    ---@cast foreground "default"|"contrast"
+    local theme_colors = require("kanso.themes")[theme](updated_palette_colors, foreground)
 
     -- Add to and/or override theme_colors
     local theme_overrides =

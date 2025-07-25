@@ -527,7 +527,7 @@ function M.setup(colors, config)
 
         BufferLineBackground = { fg = theme.ui.none, bg = theme.ui.none },
         BufferLineBuffer = { fg = theme.ui.none, bg = theme.ui.none },
-        BufferLineBufferSelected = { bg = theme.ui.none },
+        BufferLineBufferSelected = { bg = theme.ui.none, fg = theme.ui.fg },
         BufferLineBufferVisible = { bg = theme.ui.none },
         BufferLineCloseButton = { bg = theme.ui.none },
         BufferLineCloseButtonSelected = { bg = theme.ui.none },

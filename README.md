@@ -29,7 +29,8 @@
 - 🌈 Extensive support for `TreeSitter` syntax highlighting
 - 🔌 Compatible with popular plugins out of the box
 - ⚡ Compilation to lua byte code for fast startup times
-- 🎨 Three beautiful theme variants to match your mood and environment
+- 🎨 Four beautiful theme variants to match your mood and environment
+- 🔆 Contrast mode for enhanced syntax highlighting visibility
 - 👁️ WCAG 2.1 AA compliant
 
 ## 📦 Installation
@@ -93,11 +94,12 @@ require('kanso').setup({
     overrides = function(colors) -- add/modify highlights
         return {}
     end,
-    theme = "zen",              -- Load "zen" theme
+    theme = "ink",              -- Load "ink" theme  
     background = {               -- map the value of 'background' option to a theme
-        dark = "zen",           -- try "ink" !
-        light = "pearl"         -- try "mist" !
+        dark = "ink",           -- try "zen" !
+        light = "ink"           -- try "pearl" or "mist" !
     },
+    foreground = "default",      -- "default" or "contrast" (can also be a table like background)
 })
 
 -- setup must be called before loading
@@ -174,6 +176,39 @@ or
 ```lua
 require("kanso").load("zen")
 ```
+
+</details>
+
+## 🌟 Foreground Contrast
+
+Kansō now supports a foreground contrast option that enhances the saturation of syntax highlighting colors while keeping the same background colors. This is useful for improving visibility in certain lighting conditions or personal preference.
+
+<details>
+<summary><strong>🔆 Using Contrast Mode</strong></summary>
+
+The `foreground` option can be configured per background mode:
+
+```lua
+require('kanso').setup({
+    foreground = {
+        dark = "default",    -- Use default colors in dark mode
+        light = "contrast"   -- Use higher saturation in light mode
+    },
+})
+```
+
+When set to `"contrast"`, syntax highlighting colors will have increased saturation making them stand out more against the background:
+
+- Zen, Ink, and Mist themes: 20% more vibrant colors
+- Pearl theme: 40% more vibrant colors
+
+This is particularly useful:
+
+- In bright environments where you need more color distinction
+- For users who prefer more vibrant syntax highlighting
+- When using the light themes where contrast can be beneficial
+
+The contrast adjustment only affects syntax highlighting colors (strings, keywords, functions, etc.) and does not change UI elements or background colors.
 
 </details>
 

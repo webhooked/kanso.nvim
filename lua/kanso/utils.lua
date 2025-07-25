@@ -1,5 +1,5 @@
 local M = {}
-local PATH_SEP = vim.loop.os_uname().version:match("Windows") and "\\" or "/"
+local PATH_SEP = vim.uv.os_uname().version:match("Windows") and "\\" or "/"
 
 local get_compiled_path = function(theme)
     return table.concat({ vim.fn.stdpath("state"), "kanso", theme .. "_compiled.lua" }, PATH_SEP)
@@ -8,14 +8,14 @@ end
 ---@return string theme
 function M.get_theme_from_bg_opt()
     local config = require("kanso").config
-    return config.theme[vim.o.background] or config.theme.default
+    return config.background[vim.o.background] or config.theme
 end
 
 ---@param theme string
 ---@param highlights table
 ---@param termcolors table
 function M.compile(theme, highlights, termcolors)
-    vim.loop.fs_mkdir(vim.fn.stdpath("state") .. PATH_SEP .. "kanso", 448)
+    vim.uv.fs_mkdir(vim.fn.stdpath("state") .. PATH_SEP .. "kanso", 448)
 
     local fname = get_compiled_path(theme)
     local file, err = io.open(fname, "wb")

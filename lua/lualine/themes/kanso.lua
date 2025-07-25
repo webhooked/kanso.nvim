@@ -3,8 +3,8 @@ local theme = require("kanso.colors").setup().theme
 local kanso = {}
 
 kanso.normal = {
-    a = { bg = theme.syn.fun, fg = theme.ui.bg },
-    b = { bg = theme.ui.none, fg = theme.syn.fun },
+    a = { bg = theme.ui.fg, fg = theme.ui.bg },
+    b = { bg = theme.ui.none, fg = theme.ui.fg },
     c = { bg = theme.ui.none, fg = theme.ui.fg },
 }
 

@@ -1,5 +1,3 @@
-local c = require("kanso.lib.color")
-
 --TODO:
 --PreProc needs its own color
 --parameter and field should be different
@@ -94,8 +92,9 @@ local c = require("kanso.lib.color")
 
 return {
     ---@param palette PaletteColors
+    ---@param foreground? "default"|"contrast"
     ---@return ThemeColors
-    zen = function(palette)
+    zen = function(palette, foreground)
         return {
             ui = {
                 none = "NONE",
@@ -143,25 +142,25 @@ return {
                 },
             },
             syn = {
-                string = palette.green3,
+                string = foreground == "contrast" and palette.green3Contrast or palette.green3,
                 variable = "NONE",
-                number = palette.pink,
-                constant = palette.orange,
-                identifier = palette.violet2,
+                number = foreground == "contrast" and palette.pinkContrast or palette.pink,
+                constant = foreground == "contrast" and palette.orangeContrast or palette.orange,
+                identifier = foreground == "contrast" and palette.violet2Contrast or palette.violet2,
                 parameter = palette.gray3,
-                fun = palette.blue3,
-                statement = palette.violet2,
-                keyword = palette.violet2,
+                fun = foreground == "contrast" and palette.blue3Contrast or palette.blue3,
+                statement = foreground == "contrast" and palette.violet2Contrast or palette.violet2,
+                keyword = foreground == "contrast" and palette.violet2Contrast or palette.violet2,
                 operator = palette.gray3,
                 preproc = palette.gray3,
-                type = palette.aqua,
-                regex = palette.red3,
+                type = foreground == "contrast" and palette.aquaContrast or palette.aqua,
+                regex = foreground == "contrast" and palette.red3Contrast or palette.red3,
                 deprecated = palette.gray,
                 punct = palette.gray3,
                 comment = palette.gray4,
-                special1 = palette.yellow3,
-                special2 = palette.violet2,
-                special3 = palette.violet2,
+                special1 = foreground == "contrast" and palette.yellow3Contrast or palette.yellow3,
+                special2 = foreground == "contrast" and palette.violet2Contrast or palette.violet2,
+                special3 = foreground == "contrast" and palette.violet2Contrast or palette.violet2,
             },
             diag = {
                 error = palette.red,
@@ -205,8 +204,9 @@ return {
         }
     end,
     ---@param palette PaletteColors
+    ---@param foreground? "default"|"contrast"
     ---@return ThemeColors
-    ink = function(palette)
+    ink = function(palette, foreground)
         return {
             ui = {
                 none = "NONE",
@@ -254,25 +254,25 @@ return {
                 },
             },
             syn = {
-                string = palette.green3,
+                string = foreground == "contrast" and palette.green3Contrast or palette.green3,
                 variable = "NONE",
-                number = palette.pink,
-                constant = palette.orange,
-                identifier = palette.violet2,
+                number = foreground == "contrast" and palette.pinkContrast or palette.pink,
+                constant = foreground == "contrast" and palette.orangeContrast or palette.orange,
+                identifier = foreground == "contrast" and palette.violet2Contrast or palette.violet2,
                 parameter = palette.gray3,
-                fun = palette.blue3,
-                statement = palette.violet2,
-                keyword = palette.violet2,
+                fun = foreground == "contrast" and palette.blue3Contrast or palette.blue3,
+                statement = foreground == "contrast" and palette.violet2Contrast or palette.violet2,
+                keyword = foreground == "contrast" and palette.violet2Contrast or palette.violet2,
                 operator = palette.gray3,
                 preproc = palette.gray3,
-                type = palette.aqua,
-                regex = palette.red3,
+                type = foreground == "contrast" and palette.aquaContrast or palette.aqua,
+                regex = foreground == "contrast" and palette.red3Contrast or palette.red3,
                 deprecated = palette.gray,
                 punct = palette.gray3,
                 comment = palette.gray4,
-                special1 = palette.yellow3,
-                special2 = palette.violet2,
-                special3 = palette.violet2,
+                special1 = foreground == "contrast" and palette.yellow3Contrast or palette.yellow3,
+                special2 = foreground == "contrast" and palette.violet2Contrast or palette.violet2,
+                special3 = foreground == "contrast" and palette.violet2Contrast or palette.violet2,
             },
             diag = {
                 error = palette.red,
@@ -316,8 +316,9 @@ return {
         }
     end,
     ---@param palette PaletteColors
+    ---@param foreground? "default"|"contrast"
     ---@return ThemeColors
-    pearl = function(palette)
+    pearl = function(palette, foreground)
         return {
             ui = {
                 none = "NONE",
@@ -364,25 +365,25 @@ return {
                 },
             },
             syn = {
-                string = palette.pearlGreen,
+                string = foreground == "contrast" and palette.pearlGreenContrast or palette.pearlGreen,
                 variable = "NONE",
-                number = palette.pearlPink,
-                constant = palette.pearlOrange,
-                identifier = palette.pearlViolet4,
-                parameter = palette.pearlBlue5,
-                fun = palette.pearlBlue4,
-                statement = palette.pearlViolet4,
-                keyword = palette.pearlViolet4,
+                number = foreground == "contrast" and palette.pearlPinkContrast or palette.pearlPink,
+                constant = foreground == "contrast" and palette.pearlOrangeContrast or palette.pearlOrange,
+                identifier = foreground == "contrast" and palette.pearlViolet4Contrast or palette.pearlViolet4,
+                parameter = foreground == "contrast" and palette.pearlBlue5Contrast or palette.pearlBlue5,
+                fun = foreground == "contrast" and palette.pearlBlue4Contrast or palette.pearlBlue4,
+                statement = foreground == "contrast" and palette.pearlViolet4Contrast or palette.pearlViolet4,
+                keyword = foreground == "contrast" and palette.pearlViolet4Contrast or palette.pearlViolet4,
                 operator = palette.pearlGray3,
                 preproc = palette.pearlGray2,
-                type = palette.pearlAqua,
-                regex = palette.pearlYellow2,
+                type = foreground == "contrast" and palette.pearlAquaContrast or palette.pearlAqua,
+                regex = foreground == "contrast" and palette.pearlYellow2Contrast or palette.pearlYellow2,
                 deprecated = palette.pearlGray3,
                 comment = palette.pearlGray3,
                 punct = palette.pearlGray3,
-                special1 = palette.pearlYellow2,
-                special2 = palette.pearlViolet4,
-                special3 = palette.pearlViolet4,
+                special1 = foreground == "contrast" and palette.pearlYellow2Contrast or palette.pearlYellow2,
+                special2 = foreground == "contrast" and palette.pearlViolet4Contrast or palette.pearlViolet4,
+                special3 = foreground == "contrast" and palette.pearlViolet4Contrast or palette.pearlViolet4,
             },
             vcs = {
                 added = palette.pearlGreen2,
@@ -426,8 +427,9 @@ return {
         }
     end,
     ---@param palette PaletteColors
+    ---@param foreground? "default"|"contrast"
     ---@return ThemeColors
-    mist = function(palette)
+    mist = function(palette, foreground)
         return {
             ui = {
                 none = "NONE",
@@ -475,25 +477,25 @@ return {
                 },
             },
             syn = {
-                string = palette.green3,
+                string = foreground == "contrast" and palette.green3Contrast or palette.green3,
                 variable = "NONE",
-                number = palette.pink,
-                constant = palette.orange,
-                identifier = palette.violet2,
+                number = foreground == "contrast" and palette.pinkContrast or palette.pink,
+                constant = foreground == "contrast" and palette.orangeContrast or palette.orange,
+                identifier = foreground == "contrast" and palette.violet2Contrast or palette.violet2,
                 parameter = palette.gray3,
-                fun = palette.blue3,
-                statement = palette.violet2,
-                keyword = palette.violet2,
+                fun = foreground == "contrast" and palette.blue3Contrast or palette.blue3,
+                statement = foreground == "contrast" and palette.violet2Contrast or palette.violet2,
+                keyword = foreground == "contrast" and palette.violet2Contrast or palette.violet2,
                 operator = palette.gray3,
                 preproc = palette.gray3,
-                type = palette.aqua,
-                regex = palette.red3,
+                type = foreground == "contrast" and palette.aquaContrast or palette.aqua,
+                regex = foreground == "contrast" and palette.red3Contrast or palette.red3,
                 deprecated = palette.gray,
                 punct = palette.gray3,
                 comment = palette.gray4,
-                special1 = palette.yellow3,
-                special2 = palette.violet2,
-                special3 = palette.violet2,
+                special1 = foreground == "contrast" and palette.yellow3Contrast or palette.yellow3,
+                special2 = foreground == "contrast" and palette.violet2Contrast or palette.violet2,
+                special3 = foreground == "contrast" and palette.violet2Contrast or palette.violet2,
             },
             diag = {
                 error = palette.red,
@@ -509,9 +511,9 @@ return {
                 text = palette.diffYellow,
             },
             vcs = {
-                added = palette.autumnGreen,
-                removed = palette.autumnRed,
-                changed = palette.autumnYellow,
+                added = palette.gitGreen,
+                removed = palette.gitRed,
+                changed = palette.gitYellow,
                 untracked = palette.gray4,
             },
             term = {

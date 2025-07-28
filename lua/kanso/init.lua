@@ -25,7 +25,7 @@ M.config = {
         return {}
     end,
     ---@type { dark: string, light: string }
-    background = { dark = "ink", light = "pearl" },
+    background = { dark = "ink", light = "ink" },
     theme = "ink",
     ---@type { dark: "default"|"saturated", light: "default"|"saturated" }|"default"|"saturated"
     foreground = "default",
@@ -52,7 +52,13 @@ end
 function M.load(theme)
     local utils = require("kanso.utils")
 
-    theme = theme or M.config.background[vim.o.background] or M.config.theme
+    -- If theme is explicitly provided, use it and disable background-based switching
+    if theme then
+        M._EXPLICIT_THEME = theme
+    end
+
+    -- Use explicit theme if set, otherwise fall back to background-based selection
+    theme = M._EXPLICIT_THEME or M.config.background[vim.o.background] or M.config.theme
     M._CURRENT_THEME = theme
 
     if vim.g.colors_name then

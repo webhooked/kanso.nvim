@@ -57,29 +57,29 @@ local palette = {
     orange2 = "#b98d7b",
     aqua = "#8ea4a2",
 
-    -- Contrast variants (20% more saturation)
-    redContrast = "#C93134",
-    red2Contrast = "#ED5965",
-    red3Contrast = "#CA675F",
-    yellowContrast = "#E59F49",
-    yellow2Contrast = "#EDC272",
-    yellow3Contrast = "#CAAC7A",
-    greenContrast = "#8FC055",
-    green2Contrast = "#7CAF7C",
-    green3Contrast = "#7F9F6E",
-    green4Contrast = "#5B9A82",
-    green5Contrast = "#6BAE97",
-    blueContrast = "#6EBBD4",
-    blue2Contrast = "#568B8F",
-    blue3Contrast = "#7EAABA",
-    blue4Contrast = "#81AAA9",
-    violetContrast = "#8A88B0",
-    violet2Contrast = "#7E91AF",
-    violet3Contrast = "#8A9FBE",
-    pinkContrast = "#A08AA2",
-    orangeContrast = "#BC8A6C",
-    orange2Contrast = "#BF856B",
-    aquaContrast = "#81AAA9",
+    -- Saturated variants (20% more saturation)
+    redSaturated = "#C93134",
+    red2Saturated = "#ED5965",
+    red3Saturated = "#CA675F",
+    yellowSaturated = "#E59F49",
+    yellow2Saturated = "#EDC272",
+    yellow3Saturated = "#CAAC7A",
+    greenSaturated = "#8FC055",
+    green2Saturated = "#7CAF7C",
+    green3Saturated = "#7F9F6E",
+    green4Saturated = "#5B9A82",
+    green5Saturated = "#6BAE97",
+    blueSaturated = "#6EBBD4",
+    blue2Saturated = "#568B8F",
+    blue3Saturated = "#7EAABA",
+    blue4Saturated = "#81AAA9",
+    violetSaturated = "#8A88B0",
+    violet2Saturated = "#7E91AF",
+    violet3Saturated = "#8A9FBE",
+    pinkSaturated = "#A08AA2",
+    orangeSaturated = "#BC8A6C",
+    orange2Saturated = "#BF856B",
+    aquaSaturated = "#81AAA9",
 
     -- Fg and Comments
     fg = "#C5C9C7",
@@ -133,29 +133,29 @@ local palette = {
     pearlTeal3 = "#5a7785",
     pearlCyan = "#d7e3d8",
 
-    -- Pearl contrast variants (40% more saturation)
-    pearlGreenContrast = "#5E8F2F",
-    pearlGreen2Contrast = "#5B9945",
-    pearlGreen3Contrast = "#A8DA9B",
-    pearlPinkContrast = "#C04062",
-    pearlOrangeContrast = "#E05700",
-    pearlOrange2Contrast = "#FF7700",
-    pearlYellowContrast = "#656720",
-    pearlYellow2Contrast = "#72612B",
-    pearlYellow3Contrast = "#F28C00",
-    pearlYellow4Contrast = "#FFD56D",
-    pearlRedContrast = "#D72436",
-    pearlRed2Contrast = "#E42D2C",
-    pearlRed3Contrast = "#F50000",
-    pearlRed4Contrast = "#E4977B",
-    pearlAquaContrast = "#3E8366",
-    pearlAqua2Contrast = "#428F6A",
-    pearlTeal1Contrast = "#2E96B0",
-    pearlTeal2Contrast = "#469FD3",
-    pearlTeal3Contrast = "#3D8077",
-    pearlBlue4Contrast = "#2A73B1",
-    pearlBlue5Contrast = "#3E56B8",
-    pearlViolet4Contrast = "#44418F",
+    -- Pearl saturated variants (40% more saturation)
+    pearlGreenSaturated = "#5E8F2F",
+    pearlGreen2Saturated = "#5B9945",
+    pearlGreen3Saturated = "#A8DA9B",
+    pearlPinkSaturated = "#C04062",
+    pearlOrangeSaturated = "#E05700",
+    pearlOrange2Saturated = "#FF7700",
+    pearlYellowSaturated = "#656720",
+    pearlYellow2Saturated = "#72612B",
+    pearlYellow3Saturated = "#F28C00",
+    pearlYellow4Saturated = "#FFD56D",
+    pearlRedSaturated = "#D72436",
+    pearlRed2Saturated = "#E42D2C",
+    pearlRed3Saturated = "#F50000",
+    pearlRed4Saturated = "#E4977B",
+    pearlAquaSaturated = "#3E8366",
+    pearlAqua2Saturated = "#428F6A",
+    pearlTeal1Saturated = "#2E96B0",
+    pearlTeal2Saturated = "#469FD3",
+    pearlTeal3Saturated = "#3D8077",
+    pearlBlue4Saturated = "#2A73B1",
+    pearlBlue5Saturated = "#3E56B8",
+    pearlViolet4Saturated = "#44418F",
 }
 
 local M = {}
@@ -165,7 +165,7 @@ local M = {}
 ---     Defaults to KansoConfig.colors.
 ---   - theme: Use selected theme. Defaults to KansoConfig.theme
 ---     according to the value of 'background' option.
----@param opts? { colors?: table, theme?: string, foreground?: "default"|"contrast" }
+---@param opts? { colors?: table, theme?: string, foreground?: "default"|"saturated" }
 ---@return { theme: ThemeColors, palette: PaletteColors}
 function M.setup(opts)
     opts = opts or {}
@@ -188,7 +188,7 @@ function M.setup(opts)
         or (type(kanso_config.foreground) == "table" and kanso_config.foreground[bg_mode])
         or kanso_config.foreground
         or "default"
-    ---@cast foreground "default"|"contrast"
+    ---@cast foreground "default"|"saturated"
     local theme_colors = require("kanso.themes")[theme](updated_palette_colors, foreground)
 
     -- Add to and/or override theme_colors

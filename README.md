@@ -30,7 +30,7 @@
 - 🔌 Compatible with popular plugins out of the box
 - ⚡ Compilation to lua byte code for fast startup times
 - 🎨 Four beautiful theme variants to match your mood and environment
-- 🔆 Contrast mode for enhanced syntax highlighting visibility
+- 🔆 Saturated mode for enhanced syntax highlighting visibility
 - 👁️ WCAG 2.1 AA compliant
 
 ## 📦 Installation
@@ -98,7 +98,7 @@ require('kanso').setup({
         dark = "ink",           -- try "zen" !
         light = "pearl"           -- try "mist" !
     },
-    foreground = "default",      -- "default" or "contrast" (can also be a table like background)
+    foreground = "default",      -- "default" or "saturated" (can also be a table like background)
 })
 
 -- setup must be called before loading
@@ -137,12 +137,12 @@ Kansō comes in four beautiful variants:
   <br/><br/>
 
   <h3>✧ Ink ✧</h3>
-  <p>Balanced theme with elegant contrast.</p>
+  <p>Balanced theme with elegant colors.</p>
   <img src="kanso_ink.png" width="900">
   <br/><br/>
 
   <h3>✧ Mist ✧</h3>
-  <p>Soft & muted dark theme with gentle contrast.</p>
+  <p>Soft & muted dark theme with gentle colors.</p>
   <img src="kanso_mist.png" width="900">
   <br/><br/>
 
@@ -178,12 +178,12 @@ require("kanso").load("zen")
 
 </details>
 
-## 🌟 Foreground Contrast
+## 🌟 Foreground Saturation
 
-Kansō now supports a foreground contrast option that enhances the saturation of syntax highlighting colors while keeping the same background colors. This is useful for improving visibility in certain lighting conditions or personal preference.
+Kansō now supports a foreground saturation option that enhances the saturation of syntax highlighting colors while keeping the same background colors. This is useful for improving visibility in certain lighting conditions or personal preference.
 
 <details>
-<summary><strong>🔆 Using Contrast Mode</strong></summary>
+<summary><strong>🔆 Using Saturated Mode</strong></summary>
 
 The `foreground` option can be configured per background mode:
 
@@ -191,12 +191,12 @@ The `foreground` option can be configured per background mode:
 require('kanso').setup({
     foreground = {
         dark = "default",    -- Use default colors in dark mode
-        light = "contrast"   -- Use higher saturation in light mode
+        light = "saturated"   -- Use higher saturation in light mode
     },
 })
 ```
 
-When set to `"contrast"`, syntax highlighting colors will have increased saturation making them stand out more against the background:
+When set to `"saturated"`, syntax highlighting colors will have increased saturation making them stand out more against the background:
 
 - Zen, Ink, and Mist themes: 20% more vibrant colors
 - Pearl theme: 40% more vibrant colors
@@ -205,9 +205,9 @@ This is particularly useful:
 
 - In bright environments where you need more color distinction
 - For users who prefer more vibrant syntax highlighting
-- When using the light themes where contrast can be beneficial
+- When using the light themes where increased saturation can be beneficial
 
-The contrast adjustment only affects syntax highlighting colors (strings, keywords, functions, etc.) and does not change UI elements or background colors.
+The saturation adjustment only affects syntax highlighting colors (strings, keywords, functions, etc.) and does not change UI elements or background colors.
 
 </details>
 

@@ -92,7 +92,7 @@
 
 return {
     ---@param palette PaletteColors
-    ---@param foreground? "default"|"contrast"
+    ---@param foreground? "default"|"saturated"
     ---@return ThemeColors
     zen = function(palette, foreground)
         return {
@@ -142,25 +142,25 @@ return {
                 },
             },
             syn = {
-                string = foreground == "contrast" and palette.green3Contrast or palette.green3,
+                string = foreground == "saturated" and palette.green3Saturated or palette.green3,
                 variable = "NONE",
-                number = foreground == "contrast" and palette.pinkContrast or palette.pink,
-                constant = foreground == "contrast" and palette.orangeContrast or palette.orange,
-                identifier = foreground == "contrast" and palette.violet2Contrast or palette.violet2,
+                number = foreground == "saturated" and palette.pinkSaturated or palette.pink,
+                constant = foreground == "saturated" and palette.orangeSaturated or palette.orange,
+                identifier = foreground == "saturated" and palette.violet2Saturated or palette.violet2,
                 parameter = palette.gray3,
-                fun = foreground == "contrast" and palette.blue3Contrast or palette.blue3,
-                statement = foreground == "contrast" and palette.violet2Contrast or palette.violet2,
-                keyword = foreground == "contrast" and palette.violet2Contrast or palette.violet2,
+                fun = foreground == "saturated" and palette.blue3Saturated or palette.blue3,
+                statement = foreground == "saturated" and palette.violet2Saturated or palette.violet2,
+                keyword = foreground == "saturated" and palette.violet2Saturated or palette.violet2,
                 operator = palette.gray3,
                 preproc = palette.gray3,
-                type = foreground == "contrast" and palette.aquaContrast or palette.aqua,
-                regex = foreground == "contrast" and palette.red3Contrast or palette.red3,
+                type = foreground == "saturated" and palette.aquaSaturated or palette.aqua,
+                regex = foreground == "saturated" and palette.red3Saturated or palette.red3,
                 deprecated = palette.gray,
                 punct = palette.gray3,
                 comment = palette.gray4,
-                special1 = foreground == "contrast" and palette.yellow3Contrast or palette.yellow3,
-                special2 = foreground == "contrast" and palette.violet2Contrast or palette.violet2,
-                special3 = foreground == "contrast" and palette.violet2Contrast or palette.violet2,
+                special1 = foreground == "saturated" and palette.yellow3Saturated or palette.yellow3,
+                special2 = foreground == "saturated" and palette.violet2Saturated or palette.violet2,
+                special3 = foreground == "saturated" and palette.violet2Saturated or palette.violet2,
             },
             diag = {
                 error = palette.red,
@@ -204,7 +204,7 @@ return {
         }
     end,
     ---@param palette PaletteColors
-    ---@param foreground? "default"|"contrast"
+    ---@param foreground? "default"|"saturated"
     ---@return ThemeColors
     ink = function(palette, foreground)
         return {
@@ -254,25 +254,25 @@ return {
                 },
             },
             syn = {
-                string = foreground == "contrast" and palette.green3Contrast or palette.green3,
+                string = foreground == "saturated" and palette.green3Saturated or palette.green3,
                 variable = "NONE",
-                number = foreground == "contrast" and palette.pinkContrast or palette.pink,
-                constant = foreground == "contrast" and palette.orangeContrast or palette.orange,
-                identifier = foreground == "contrast" and palette.violet2Contrast or palette.violet2,
+                number = foreground == "saturated" and palette.pinkSaturated or palette.pink,
+                constant = foreground == "saturated" and palette.orangeSaturated or palette.orange,
+                identifier = foreground == "saturated" and palette.violet2Saturated or palette.violet2,
                 parameter = palette.gray3,
-                fun = foreground == "contrast" and palette.blue3Contrast or palette.blue3,
-                statement = foreground == "contrast" and palette.violet2Contrast or palette.violet2,
-                keyword = foreground == "contrast" and palette.violet2Contrast or palette.violet2,
+                fun = foreground == "saturated" and palette.blue3Saturated or palette.blue3,
+                statement = foreground == "saturated" and palette.violet2Saturated or palette.violet2,
+                keyword = foreground == "saturated" and palette.violet2Saturated or palette.violet2,
                 operator = palette.gray3,
                 preproc = palette.gray3,
-                type = foreground == "contrast" and palette.aquaContrast or palette.aqua,
-                regex = foreground == "contrast" and palette.red3Contrast or palette.red3,
+                type = foreground == "saturated" and palette.aquaSaturated or palette.aqua,
+                regex = foreground == "saturated" and palette.red3Saturated or palette.red3,
                 deprecated = palette.gray,
                 punct = palette.gray3,
                 comment = palette.gray4,
-                special1 = foreground == "contrast" and palette.yellow3Contrast or palette.yellow3,
-                special2 = foreground == "contrast" and palette.violet2Contrast or palette.violet2,
-                special3 = foreground == "contrast" and palette.violet2Contrast or palette.violet2,
+                special1 = foreground == "saturated" and palette.yellow3Saturated or palette.yellow3,
+                special2 = foreground == "saturated" and palette.violet2Saturated or palette.violet2,
+                special3 = foreground == "saturated" and palette.violet2Saturated or palette.violet2,
             },
             diag = {
                 error = palette.red,
@@ -316,7 +316,7 @@ return {
         }
     end,
     ---@param palette PaletteColors
-    ---@param foreground? "default"|"contrast"
+    ---@param foreground? "default"|"saturated"
     ---@return ThemeColors
     pearl = function(palette, foreground)
         return {
@@ -365,25 +365,25 @@ return {
                 },
             },
             syn = {
-                string = foreground == "contrast" and palette.pearlGreenContrast or palette.pearlGreen,
+                string = foreground == "saturated" and palette.pearlGreenSaturated or palette.pearlGreen,
                 variable = "NONE",
-                number = foreground == "contrast" and palette.pearlPinkContrast or palette.pearlPink,
-                constant = foreground == "contrast" and palette.pearlOrangeContrast or palette.pearlOrange,
-                identifier = foreground == "contrast" and palette.pearlViolet4Contrast or palette.pearlViolet4,
-                parameter = foreground == "contrast" and palette.pearlBlue5Contrast or palette.pearlBlue5,
-                fun = foreground == "contrast" and palette.pearlBlue4Contrast or palette.pearlBlue4,
-                statement = foreground == "contrast" and palette.pearlViolet4Contrast or palette.pearlViolet4,
-                keyword = foreground == "contrast" and palette.pearlViolet4Contrast or palette.pearlViolet4,
+                number = foreground == "saturated" and palette.pearlPinkSaturated or palette.pearlPink,
+                constant = foreground == "saturated" and palette.pearlOrangeSaturated or palette.pearlOrange,
+                identifier = foreground == "saturated" and palette.pearlViolet4Saturated or palette.pearlViolet4,
+                parameter = foreground == "saturated" and palette.pearlBlue5Saturated or palette.pearlBlue5,
+                fun = foreground == "saturated" and palette.pearlBlue4Saturated or palette.pearlBlue4,
+                statement = foreground == "saturated" and palette.pearlViolet4Saturated or palette.pearlViolet4,
+                keyword = foreground == "saturated" and palette.pearlViolet4Saturated or palette.pearlViolet4,
                 operator = palette.pearlGray3,
                 preproc = palette.pearlGray2,
-                type = foreground == "contrast" and palette.pearlAquaContrast or palette.pearlAqua,
-                regex = foreground == "contrast" and palette.pearlYellow2Contrast or palette.pearlYellow2,
+                type = foreground == "saturated" and palette.pearlAquaSaturated or palette.pearlAqua,
+                regex = foreground == "saturated" and palette.pearlYellow2Saturated or palette.pearlYellow2,
                 deprecated = palette.pearlGray3,
                 comment = palette.pearlGray3,
                 punct = palette.pearlGray3,
-                special1 = foreground == "contrast" and palette.pearlYellow2Contrast or palette.pearlYellow2,
-                special2 = foreground == "contrast" and palette.pearlViolet4Contrast or palette.pearlViolet4,
-                special3 = foreground == "contrast" and palette.pearlViolet4Contrast or palette.pearlViolet4,
+                special1 = foreground == "saturated" and palette.pearlYellow2Saturated or palette.pearlYellow2,
+                special2 = foreground == "saturated" and palette.pearlViolet4Saturated or palette.pearlViolet4,
+                special3 = foreground == "saturated" and palette.pearlViolet4Saturated or palette.pearlViolet4,
             },
             vcs = {
                 added = palette.pearlGreen2,
@@ -427,7 +427,7 @@ return {
         }
     end,
     ---@param palette PaletteColors
-    ---@param foreground? "default"|"contrast"
+    ---@param foreground? "default"|"saturated"
     ---@return ThemeColors
     mist = function(palette, foreground)
         return {
@@ -477,25 +477,25 @@ return {
                 },
             },
             syn = {
-                string = foreground == "contrast" and palette.green3Contrast or palette.green3,
+                string = foreground == "saturated" and palette.green3Saturated or palette.green3,
                 variable = "NONE",
-                number = foreground == "contrast" and palette.pinkContrast or palette.pink,
-                constant = foreground == "contrast" and palette.orangeContrast or palette.orange,
-                identifier = foreground == "contrast" and palette.violet2Contrast or palette.violet2,
+                number = foreground == "saturated" and palette.pinkSaturated or palette.pink,
+                constant = foreground == "saturated" and palette.orangeSaturated or palette.orange,
+                identifier = foreground == "saturated" and palette.violet2Saturated or palette.violet2,
                 parameter = palette.gray3,
-                fun = foreground == "contrast" and palette.blue3Contrast or palette.blue3,
-                statement = foreground == "contrast" and palette.violet2Contrast or palette.violet2,
-                keyword = foreground == "contrast" and palette.violet2Contrast or palette.violet2,
+                fun = foreground == "saturated" and palette.blue3Saturated or palette.blue3,
+                statement = foreground == "saturated" and palette.violet2Saturated or palette.violet2,
+                keyword = foreground == "saturated" and palette.violet2Saturated or palette.violet2,
                 operator = palette.gray3,
                 preproc = palette.gray3,
-                type = foreground == "contrast" and palette.aquaContrast or palette.aqua,
-                regex = foreground == "contrast" and palette.red3Contrast or palette.red3,
+                type = foreground == "saturated" and palette.aquaSaturated or palette.aqua,
+                regex = foreground == "saturated" and palette.red3Saturated or palette.red3,
                 deprecated = palette.gray,
                 punct = palette.gray3,
                 comment = palette.gray4,
-                special1 = foreground == "contrast" and palette.yellow3Contrast or palette.yellow3,
-                special2 = foreground == "contrast" and palette.violet2Contrast or palette.violet2,
-                special3 = foreground == "contrast" and palette.violet2Contrast or palette.violet2,
+                special1 = foreground == "saturated" and palette.yellow3Saturated or palette.yellow3,
+                special2 = foreground == "saturated" and palette.violet2Saturated or palette.violet2,
+                special3 = foreground == "saturated" and palette.violet2Saturated or palette.violet2,
             },
             diag = {
                 error = palette.red,

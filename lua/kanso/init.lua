@@ -27,7 +27,7 @@ M.config = {
     ---@type { dark: string, light: string }
     background = { dark = "ink", light = "pearl" },
     theme = "ink",
-    ---@type { dark: "default"|"contrast", light: "default"|"contrast" }|"default"|"contrast"
+    ---@type { dark: "default"|"saturated", light: "default"|"saturated" }|"default"|"saturated"
     foreground = "default",
     compile = false,
 }
@@ -88,7 +88,7 @@ function M.load(theme)
     else
         local foreground_setting = type(M.config.foreground) == "table" and M.config.foreground[vim.o.background]
             or M.config.foreground
-        ---@cast foreground_setting "default"|"contrast"
+        ---@cast foreground_setting "default"|"saturated"
         local colors =
             require("kanso.colors").setup({ theme = theme, colors = M.config.colors, foreground = foreground_setting })
         local highlights = require("kanso.highlights").setup(colors, M.config)
@@ -128,7 +128,7 @@ function M.compile()
         else
             -- Fallback for backward compatibility
             local foreground_str = M.config.foreground
-            ---@cast foreground_str "default"|"contrast"
+            ---@cast foreground_str "default"|"saturated"
             local colors = require("kanso.colors").setup({
                 theme = theme,
                 colors = M.config.colors,

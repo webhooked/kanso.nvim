@@ -447,8 +447,8 @@ return {
                 bg_p2 = palette.mistBg2,
 
                 special = palette.gray5,
-                indent_line = palette.gray5,
-                active_indent_line = palette.gray5,
+                indent_line = palette.mistBg2,
+                active_indent_line = palette.mistBg3,
                 whitespace = palette.mistBg3,
                 nontext = palette.gray5,
 

@@ -4,33 +4,33 @@ local kanso = {}
 
 kanso.normal = {
     a = { bg = theme.ui.fg, fg = theme.ui.bg },
-    b = { bg = theme.ui.none, fg = theme.ui.fg },
+    b = { bg = theme.ui.bg_p1, fg = theme.ui.fg },
     c = { bg = theme.ui.none, fg = theme.ui.fg },
 }
 
 kanso.insert = {
     a = { bg = theme.diag.ok, fg = theme.ui.bg },
-    b = { bg = theme.ui.none, fg = theme.diag.ok },
+    b = { bg = theme.ui.bg_p1, fg = theme.diag.ok },
 }
 
 kanso.command = {
     a = { bg = theme.syn.operator, fg = theme.ui.bg },
-    b = { bg = theme.ui.none, fg = theme.syn.operator },
+    b = { bg = theme.ui.bg_p1, fg = theme.syn.operator },
 }
 
 kanso.visual = {
     a = { bg = theme.syn.keyword, fg = theme.ui.bg },
-    b = { bg = theme.ui.none, fg = theme.syn.keyword },
+    b = { bg = theme.ui.bg_p1, fg = theme.syn.keyword },
 }
 
 kanso.replace = {
     a = { bg = theme.syn.constant, fg = theme.ui.bg },
-    b = { bg = theme.ui.none, fg = theme.syn.constant },
+    b = { bg = theme.ui.bg_p1, fg = theme.syn.constant },
 }
 
 kanso.inactive = {
     a = { bg = theme.ui.none, fg = theme.ui.fg_dim },
-    b = { bg = theme.ui.none, fg = theme.ui.fg_dim },
+    b = { bg = theme.ui.bg_p1, fg = theme.ui.fg_dim },
     c = { bg = theme.ui.none, fg = theme.ui.fg_dim },
 }
 

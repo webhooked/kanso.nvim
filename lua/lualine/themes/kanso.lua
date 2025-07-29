@@ -30,7 +30,7 @@ kanso.replace = {
 
 kanso.inactive = {
     a = { bg = theme.ui.none, fg = theme.ui.fg_dim },
-    b = { bg = theme.ui.bg_p1, fg = theme.ui.fg_dim },
+    b = { bg = theme.ui.none, fg = theme.ui.fg_dim },
     c = { bg = theme.ui.none, fg = theme.ui.fg_dim },
 }
 

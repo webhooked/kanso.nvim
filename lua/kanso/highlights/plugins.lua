@@ -263,6 +263,12 @@ function M.setup(colors, config)
         IblIndent = { fg = theme.ui.indent_line, nocombine = true },
         IblWhitespace = { fg = theme.ui.indent_line, nocombine = true },
         IblScope = { fg = theme.ui.active_indent_line, nocombine = true },
+        -- Treesitter context for ibl
+        ["@ibl.indent.char.1"] = { fg = theme.ui.indent_line, nocombine = true },
+        ["@ibl.scope.char.1"] = { fg = theme.ui.active_indent_line, nocombine = true },
+        ["@ibl.whitespace.char.1"] = { fg = theme.ui.indent_line, nocombine = true },
+        -- Active/scope underline
+        ["@ibl.scope.underline.1"] = { sp = theme.ui.active_indent_line, underline = true, nocombine = true },
         -- Other indent plugins
         IndentLine = { fg = theme.ui.indent_line, nocombine = true },
         Indent = { fg = theme.ui.indent_line, nocombine = true },

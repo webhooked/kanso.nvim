@@ -169,8 +169,16 @@ local M = {}
 ---@return { theme: ThemeColors, palette: PaletteColors}
 function M.setup(opts)
     opts = opts or {}
-    local override_colors = opts.colors or require("kanso").config.colors
-    local theme = opts.theme or require("kanso")._CURRENT_THEME -- WARN: this fails if called before kanso.load()
+    local kanso = require("kanso")
+    local override_colors = opts.colors or kanso.config.colors
+    local theme = opts.theme or kanso._CURRENT_THEME
+    
+    -- Fallback: if _CURRENT_THEME is not set yet, try to determine theme from config
+    if not theme then
+        theme = kanso.config.background[vim.o.background] or kanso.config.theme or "ink"
+        -- Store it for future use
+        kanso._CURRENT_THEME = theme
+    end
 
     if not theme then
         error(

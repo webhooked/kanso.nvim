@@ -32,6 +32,9 @@ M.config = {
     compile = false,
 }
 
+-- Store default config for comparison
+M._DEFAULT_CONFIG = vim.deepcopy(M.config)
+
 local function check_config(_)
     local err
     return not err
@@ -57,9 +60,28 @@ function M.load(theme)
         M._EXPLICIT_THEME = theme
     end
 
-    -- Use explicit theme if set, otherwise fall back to background-based selection
-    theme = M._EXPLICIT_THEME or M.config.background[vim.o.background] or M.config.theme
+    -- Priority order for theme selection:
+    -- 1. Explicitly loaded theme variant (e.g., :colorscheme kanso-zen)
+    -- 2. Theme specified in config if different from default
+    -- 3. Background-based selection if available
+    -- 4. Fallback to config theme
+    if M._EXPLICIT_THEME then
+        theme = M._EXPLICIT_THEME
+    elseif M.config.theme ~= M._DEFAULT_CONFIG.theme then
+        -- User explicitly changed theme in config
+        theme = M.config.theme
+    elseif M.config.background and M.config.background[vim.o.background] then
+        -- Use background-based selection
+        theme = M.config.background[vim.o.background]
+    else
+        -- Use config theme (whether default or user-specified)
+        theme = M.config.theme
+    end
     M._CURRENT_THEME = theme
+    
+    -- Ensure the theme is available to colors module before any require() calls
+    -- This prevents circular dependency issues when loading within lazy.nvim
+    package.loaded["kanso"] = M
 
     if vim.g.colors_name then
         vim.cmd("hi clear")

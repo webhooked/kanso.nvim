@@ -108,13 +108,13 @@ vim.cmd("colorscheme kanso")
 <details>
 <summary><strong>💡 Important Notes</strong></summary>
 
-**Compilation:** If you enable compilation, make sure to run `:KansōCompile` command every time you make changes to your config.
+**Compilation:** If you enable compilation, make sure to run `:KansoCompile` command every time you make changes to your config.
 
 ```vim
 " 1. Modify your config
 " 2. Restart nvim
 " 3. Run this command:
-:KansōCompile
+:KansoCompile
 ```
 
 **Options:** Kansō adjusts to the value of some options. Make sure that the options `'laststatus'` and `'cmdheight'` are set **_before_** calling `setup`.

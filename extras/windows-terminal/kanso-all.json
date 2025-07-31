@@ -1,0 +1,178 @@
+{
+  "schemes": [
+    {
+      "name": "Kanso Zen",
+      "background": "#090E13",
+      "black": "#0D0C0C",
+      "red": "#c4746e",
+      "green": "#8a9a7b",
+      "yellow": "#c4b28a",
+      "blue": "#8ba4b0",
+      "purple": "#a292a3",
+      "cyan": "#8ea4a2",
+      "white": "#A4A7A4",
+      "brightBlack": "#A4A7A4",
+      "brightRed": "#e46876",
+      "brightGreen": "#87a987",
+      "brightYellow": "#e6c384",
+      "brightBlue": "#7fb4ca",
+      "brightPurple": "#938aa9",
+      "brightCyan": "#7aa89f",
+      "brightWhite": "#C5C9C7",
+      "cursorColor": "#C5C9C7",
+      "foreground": "#C5C9C7",
+      "selectionBackground": "#393B44"
+    },
+    {
+      "name": "Kanso Ink",
+      "background": "#14171d",
+      "black": "#14171d",
+      "red": "#c4746e",
+      "green": "#8a9a7b",
+      "yellow": "#c4b28a",
+      "blue": "#8ba4b0",
+      "purple": "#a292a3",
+      "cyan": "#8ea4a2",
+      "white": "#A4A7A4",
+      "brightBlack": "#A4A7A4",
+      "brightRed": "#e46876",
+      "brightGreen": "#87a987",
+      "brightYellow": "#e6c384",
+      "brightBlue": "#7fb4ca",
+      "brightPurple": "#938aa9",
+      "brightCyan": "#7aa89f",
+      "brightWhite": "#C5C9C7",
+      "cursorColor": "#C5C9C7",
+      "foreground": "#C5C9C7",
+      "selectionBackground": "#393B44"
+    },
+    {
+      "name": "Kanso Mist",
+      "background": "#22262D",
+      "black": "#22262D",
+      "red": "#c4746e",
+      "green": "#8a9a7b",
+      "yellow": "#c4b28a",
+      "blue": "#8ba4b0",
+      "purple": "#a292a3",
+      "cyan": "#8ea4a2",
+      "white": "#a4a7a4",
+      "brightBlack": "#5C6066",
+      "brightRed": "#e46876",
+      "brightGreen": "#87a987",
+      "brightYellow": "#e6c384",
+      "brightBlue": "#7fb4ca",
+      "brightPurple": "#938aa9",
+      "brightCyan": "#7aa89f",
+      "brightWhite": "#C5C9C7",
+      "cursorColor": "#C5C9C7",
+      "foreground": "#C5C9C7",
+      "selectionBackground": "#43464E"
+    },
+    {
+      "name": "Kanso Pearl",
+      "background": "#f2f1ef",
+      "black": "#22262D",
+      "red": "#c84053",
+      "green": "#6f894e",
+      "yellow": "#77713f",
+      "blue": "#4d699b",
+      "purple": "#b35b79",
+      "cyan": "#597b75",
+      "white": "#545464",
+      "brightBlack": "#6d6f6e",
+      "brightRed": "#d7474b",
+      "brightGreen": "#6e915f",
+      "brightYellow": "#836f4a",
+      "brightBlue": "#6693bf",
+      "brightPurple": "#624c83",
+      "brightCyan": "#5e857a",
+      "brightWhite": "#43436c",
+      "cursorColor": "#22262D",
+      "foreground": "#22262D",
+      "selectionBackground": "#e2e1df"
+    }
+  ],
+  "themes": [
+    {
+      "name": "Kanso Zen",
+      "tab": {
+        "background": "#090E13",
+        "iconStyle": "default",
+        "showCloseButton": "always",
+        "unfocusedBackground": "#1C1E25"
+      },
+      "tabRow": {
+        "background": "#1C1E25",
+        "unfocusedBackground": "#393B44"
+      },
+      "window": {
+        "applicationTheme": "dark",
+        "experimental.rainbowFrame": false,
+        "frame": "#090E13",
+        "unfocusedFrame": "#1C1E25",
+        "useMica": false
+      }
+    },
+    {
+      "name": "Kanso Ink",
+      "tab": {
+        "background": "#14171D",
+        "iconStyle": "default",
+        "showCloseButton": "always",
+        "unfocusedBackground": "#1f1f26"
+      },
+      "tabRow": {
+        "background": "#1f1f26",
+        "unfocusedBackground": "#393B44"
+      },
+      "window": {
+        "applicationTheme": "dark",
+        "experimental.rainbowFrame": false,
+        "frame": "#14171D",
+        "unfocusedFrame": "#1f1f26",
+        "useMica": false
+      }
+    },
+    {
+      "name": "Kanso Mist",
+      "tab": {
+        "background": "#22262D",
+        "iconStyle": "default",
+        "showCloseButton": "always",
+        "unfocusedBackground": "#2a2c35"
+      },
+      "tabRow": {
+        "background": "#2a2c35",
+        "unfocusedBackground": "#5C6066"
+      },
+      "window": {
+        "applicationTheme": "dark",
+        "experimental.rainbowFrame": false,
+        "frame": "#22262D",
+        "unfocusedFrame": "#2a2c35",
+        "useMica": false
+      }
+    },
+    {
+      "name": "Kanso Pearl",
+      "tab": {
+        "background": "#f2f1ef",
+        "iconStyle": "default",
+        "showCloseButton": "always",
+        "unfocusedBackground": "#e2e1df"
+      },
+      "tabRow": {
+        "background": "#e2e1df",
+        "unfocusedBackground": "#cacac7"
+      },
+      "window": {
+        "applicationTheme": "light",
+        "experimental.rainbowFrame": false,
+        "frame": "#f2f1ef",
+        "unfocusedFrame": "#e2e1df",
+        "useMica": false
+      }
+    }
+  ]
+}

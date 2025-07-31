@@ -1,0 +1,49 @@
+{
+  "schemes": [
+    {
+      "name": "Kanso Pearl",
+      "background": "#f2f1ef",
+      "black": "#22262D",
+      "red": "#c84053",
+      "green": "#6f894e",
+      "yellow": "#77713f",
+      "blue": "#4d699b",
+      "purple": "#b35b79",
+      "cyan": "#597b75",
+      "white": "#545464",
+      "brightBlack": "#6d6f6e",
+      "brightRed": "#d7474b",
+      "brightGreen": "#6e915f",
+      "brightYellow": "#836f4a",
+      "brightBlue": "#6693bf",
+      "brightPurple": "#624c83",
+      "brightCyan": "#5e857a",
+      "brightWhite": "#43436c",
+      "cursorColor": "#22262D",
+      "foreground": "#22262D",
+      "selectionBackground": "#e2e1df"
+    }
+  ],
+  "themes": [
+    {
+      "name": "Kanso Pearl",
+      "tab": {
+        "background": "#f2f1ef",
+        "iconStyle": "default",
+        "showCloseButton": "always",
+        "unfocusedBackground": "#e2e1df"
+      },
+      "tabRow": {
+        "background": "#e2e1df",
+        "unfocusedBackground": "#cacac7"
+      },
+      "window": {
+        "applicationTheme": "light",
+        "experimental.rainbowFrame": false,
+        "frame": "#f2f1ef",
+        "unfocusedFrame": "#e2e1df",
+        "useMica": false
+      }
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "schemes": [
+    {
+      "name": "Kanso Zen",
+      "background": "#090E13",
+      "black": "#0D0C0C",
+      "red": "#c4746e",
+      "green": "#8a9a7b",
+      "yellow": "#c4b28a",
+      "blue": "#8ba4b0",
+      "purple": "#a292a3",
+      "cyan": "#8ea4a2",
+      "white": "#A4A7A4",
+      "brightBlack": "#A4A7A4",
+      "brightRed": "#e46876",
+      "brightGreen": "#87a987",
+      "brightYellow": "#e6c384",
+      "brightBlue": "#7fb4ca",
+      "brightPurple": "#938aa9",
+      "brightCyan": "#7aa89f",
+      "brightWhite": "#C5C9C7",
+      "cursorColor": "#C5C9C7",
+      "foreground": "#C5C9C7",
+      "selectionBackground": "#393B44"
+    }
+  ],
+  "themes": [
+    {
+      "name": "Kanso Zen",
+      "tab": {
+        "background": "#090E13",
+        "iconStyle": "default",
+        "showCloseButton": "always",
+        "unfocusedBackground": "#1C1E25"
+      },
+      "tabRow": {
+        "background": "#1C1E25",
+        "unfocusedBackground": "#393B44"
+      },
+      "window": {
+        "applicationTheme": "dark",
+        "experimental.rainbowFrame": false,
+        "frame": "#090E13",
+        "unfocusedFrame": "#1C1E25",
+        "useMica": false
+      }
+    }
+  ]
+}

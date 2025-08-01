@@ -1,1 +1,1 @@
-lua require("kanso").load "ink"
+lua require("kanso").load("ink")

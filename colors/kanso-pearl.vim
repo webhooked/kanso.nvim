@@ -1,1 +1,1 @@
-lua require("kanso").load "pearl"
+lua require("kanso").load("pearl")

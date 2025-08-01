@@ -1,1 +1,1 @@
-lua require("kanso").load "mist"
+lua require("kanso").load("mist")

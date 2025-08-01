@@ -1,1 +1,1 @@
-lua require("kanso").load "zen"
+lua require("kanso").load("zen")

@@ -38,15 +38,15 @@
 Download with your favorite package manager.
 
 ```lua
--- Using Packer
-use "webhooked/kanso.nvim"
-
 -- Using Lazy
 {
   "webhooked/kanso.nvim",
   lazy = false,
   priority = 1000,
 }
+
+-- Using Packer
+use "webhooked/kanso.nvim"
 ```
 
 ## 📋 Requirements

@@ -211,7 +211,7 @@ function M.setup(colors, config)
         -- blink.cmp
         BlinkCmpMenu = { link = "Pmenu" },
         BlinkCmpMenuSelection = { link = "PmenuSel" },
-        BlinkCmpMenuBorder = { fg = theme.ui.bg_search, bg = theme.ui.pmenu.bg },
+        BlinkCmpMenuBorder = { fg = theme.ui.bg_search, bg = config.transparent and theme.ui.none or theme.ui.pmenu.bg },
         BlinkCmpScrollBarThumb = { link = "PmenuThumb" },
         BlinkCmpScrollBarGutter = { link = "PmenuSbar" },
         BlinkCmpLabel = { fg = theme.ui.pmenu.fg },

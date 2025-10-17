@@ -346,8 +346,8 @@ return {
 
                 cursor_line_nr_foreground = palette.pearlGray4,
                 cursor_line_nr_active_foreground = palette.inkBg2,
-                cursor_bg = palette.fg2,
-                cursor_fg = palette.inkBg2,
+                cursor_bg = palette.pearlBlack0,
+                cursor_fg = palette.pearlWhite0,
 
                 pmenu = {
                     fg = palette.pearlBlack2,

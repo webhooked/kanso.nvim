@@ -62,12 +62,12 @@
       "light": "#2a2c35"
     },
     "diffAdded": {
-      "dark": "#2B3328",
-      "light": "#2B3328"
+      "dark": "#76946A",
+      "light": "#76946A"
     },
     "diffRemoved": {
-      "dark": "#43242B",
-      "light": "#43242B"
+      "dark": "#C34043",
+      "light": "#C34043"
     },
     "diffContext": {
       "dark": "#2a2c35",

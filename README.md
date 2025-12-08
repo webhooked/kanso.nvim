@@ -317,6 +317,7 @@ local zen_colors = require("kanso.colors").setup({ theme = 'zen' })
 - [Windows Terminal](extras/windows-terminal/)
 - [Kansō for VS Code](https://marketplace.visualstudio.com/items?itemName=webhooked.kanso-theme)
 - [Kansō for Zed](https://github.com/webhooked/kanso-zed)
+- [Kansō for opencode](extras/opencode/)
 
 </div>
 

@@ -102,7 +102,7 @@ return {
                 fg_dim = palette.gray2,
                 fg_reverse = palette.altBlue1,
 
-                bg_dim = palette.zenBg0,
+                bg_dim = palette.zenBg1,
 
                 bg_m3 = palette.zenBg0,
                 bg_m2 = palette.zenBg0,
@@ -214,7 +214,7 @@ return {
                 fg_dim = palette.gray2,
                 fg_reverse = palette.altBlue1,
 
-                bg_dim = palette.inkBg0,
+                bg_dim = palette.inkBg1,
 
                 bg_m3 = palette.inkBg0,
                 bg_m2 = palette.inkBg0,
@@ -326,7 +326,7 @@ return {
                 fg_dim = palette.pearlBlack1,
                 fg_reverse = palette.pearlGray,
 
-                bg_dim = palette.pearlWhite0,
+                bg_dim = palette.pearlWhite1,
 
                 bg_m3 = palette.pearlWhite0,
                 bg_m2 = palette.pearlWhite0,
@@ -437,7 +437,7 @@ return {
                 fg_dim = palette.gray2,
                 fg_reverse = palette.altBlue1,
 
-                bg_dim = palette.mistBg0,
+                bg_dim = palette.mistBg1,
 
                 bg_m3 = palette.mistBg0,
                 bg_m2 = palette.mistBg0,

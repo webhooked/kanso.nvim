@@ -96,7 +96,7 @@ require('kanso').setup({
     end,
     background = {               -- map the value of 'background' option to a theme
         dark = "ink",           -- try "zen", "mist" or "pearl" !
-        light = "ink"           -- try "zen", "mist" or "pearl" !
+        light = "pearl"         -- try "zen", "mist" or "ink" !
     },
     foreground = "default",      -- "default" or "saturated" (can also be a table like background)
 })

@@ -254,6 +254,9 @@ function M.setup(colors, config)
         BlinkCmpKindTypeParameter = { link = "Type" },
         BlinkCmpKindCopilot = { link = "String" },
 
+        -- coc.vim
+        CocMenuSel = { link = "PmenuSel" },
+
         -- IndentBlankline
         IndentBlanklineChar = { fg = theme.ui.indent_line, nocombine = true },
         IndentBlanklineSpaceChar = { fg = theme.ui.indent_line, nocombine = true },

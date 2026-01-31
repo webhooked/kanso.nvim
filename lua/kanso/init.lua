@@ -103,7 +103,8 @@ function M.load(theme)
                     -- Clear cached modules to force reload
                     package.loaded["kanso.colors"] = nil
                     package.loaded["kanso.themes"] = nil
-                    M.load()
+                    -- Pass explicit theme to preserve it; if nil, respects vim.o.background
+                    M.load(M._EXPLICIT_THEME)
                 end
             end,
         })

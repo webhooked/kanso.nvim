@@ -9,9 +9,9 @@ function M.setup(colors, config)
         -- @variable                       various variable names
         ["@variable"] = { fg = theme.ui.fg },
         -- @variable.builtin (Special)     built-in variable names (e.g. `this`, `self`)
-        ["@variable.builtin"] = { fg = theme.syn.special2, italic = config.italics },
+        ["@variable.builtin"] = { fg = config.minimal and theme.ui.fg or theme.syn.special2, italic = config.italics },
         -- @variable.parameter             parameters of a function
-        ["@variable.parameter"] = { fg = theme.syn.parameter },
+        ["@variable.parameter"] = { fg = config.minimal and theme.syn.operator or theme.syn.parameter },
         -- @variable.parameter.builtin     special parameters (e.g. `_`, `it`)
         -- @variable.member                object and struct fields
         ["@variable.member"] = { fg = theme.syn.identifier },
@@ -44,21 +44,29 @@ function M.setup(colors, config)
         -- @number.float           floating-point number literals
         --
         -- @type                   type or class definitions and annotations
+        ["@type"] = { link = "Type" },
         -- @type.builtin           built-in types
+        ["@type.builtin"] = { fg = theme.syn.type },
         -- @type.definition        identifiers in type definitions (e.g. `typedef <type> <identifier>` in C)
         --
         -- @attribute              attribute annotations (e.g. Python decorators, Rust lifetimes)
         ["@attribute"] = { link = "Constant" },
         -- @attribute.builtin      builtin annotations (e.g. `@property` in Python)
         -- @property               the key in key/value pairs
+        ["@property"] = { fg = theme.syn.identifier },
         --
         -- @function               function definitions
+        ["@function"] = { link = "Function" },
         -- @function.builtin       built-in functions
+        ["@function.builtin"] = { link = "Function" },
         -- @function.call          function calls
+        ["@function.call"] = { link = "Function" },
         -- @function.macro         preprocessor macros
         --
         -- @function.method        method definitions
+        ["@function.method"] = { link = "Function" },
         -- @function.method.call   method calls
+        ["@function.method.call"] = { link = "Function" },
         --
         -- @constructor            constructor calls and definitions
         ["@constructor"] = { fg = theme.syn.special1 },
@@ -68,38 +76,51 @@ function M.setup(colors, config)
         --
         -- @keyword                keywords not fitting into specific categories
         -- @keyword.coroutine      keywords related to coroutines (e.g. `go` in Go, `async/await` in Python)
+        ["@keyword.coroutine"] = { fg = config.minimal and theme.syn.identifier or theme.syn.keyword },
         -- @keyword.function       keywords that define a function (e.g. `func` in Go, `def` in Python)
+        ["@keyword.function"] = { fg = config.minimal and theme.syn.identifier or theme.syn.keyword },
         -- @keyword.operator       operators that are English words (e.g. `and`, `or`)
-        ["@keyword.operator"] = { fg = theme.syn.operator },
+        ["@keyword.operator"] = { fg = config.minimal and theme.syn.special1 or theme.syn.operator },
         -- @keyword.import         keywords for including modules (e.g. `import`, `from` in Python)
         ["@keyword.import"] = { link = "PreProc" },
         -- @keyword.type           keywords defining composite types (e.g. `struct`, `enum`)
         -- @keyword.modifier       keywords defining type modifiers (e.g. `const`, `static`, `public`)
+        ["@keyword.modifier"] = { fg = config.minimal and theme.syn.identifier or theme.syn.keyword },
+        -- @keyword.storage        keywords for storage class (e.g. `const`, `let`, `var`)
+        ["@keyword.storage"] = { fg = config.minimal and theme.syn.identifier or theme.syn.keyword },
+        -- @storageclass           static, register, volatile, const, etc.
+        ["@storageclass"] = { fg = config.minimal and theme.syn.identifier or theme.syn.keyword },
+        -- TypeScript/JavaScript specific keywords (const, let, var, etc.)
+        ["@keyword.typescript"] = { fg = config.minimal and theme.syn.identifier or theme.syn.keyword },
+        ["@keyword.javascript"] = { fg = config.minimal and theme.syn.identifier or theme.syn.keyword },
+        ["@keyword.tsx"] = { fg = config.minimal and theme.syn.identifier or theme.syn.keyword },
+        ["@keyword.jsx"] = { fg = config.minimal and theme.syn.identifier or theme.syn.keyword },
         -- @keyword.repeat         keywords related to loops (e.g. `for`, `while`)
         -- @keyword.return         keywords like `return` and `yield`
         ["@keyword.return"] = vim.tbl_extend(
             "force",
-            { fg = theme.syn.special3 },
+            { fg = config.minimal and theme.syn.identifier or theme.syn.special3 },
             not config.italics and {} or config.keywordStyle
         ),
         -- @keyword.debug          keywords related to debugging
         -- @keyword.exception      keywords related to exceptions (e.g. `throw`, `catch`)
-        ["@keyword.exception"] = vim.tbl_extend("force", { fg = theme.syn.special3 }, config.statementStyle),
+        ["@keyword.exception"] = vim.tbl_extend("force", { fg = config.minimal and theme.syn.operator or theme.syn.special3 }, config.statementStyle),
 
         ["@keyword.luap"] = { link = "@string.regex" },
         --
         -- @keyword.conditional         keywords related to conditionals (e.g. `if`, `else`)
+        ["@keyword.conditional"] = { fg = config.minimal and theme.syn.identifier or theme.syn.keyword },
         -- @keyword.conditional.ternary ternary operator (e.g. `?`, `:`)
         --
         -- @keyword.directive           various preprocessor directives and shebangs
         -- @keyword.directive.define    preprocessor definition directives
         --
         -- @punctuation.delimiter  delimiters (e.g. `;`, `.`, `,`)
-        ["@punctuation.delimiter"] = { fg = theme.syn.punct },
+        ["@punctuation.delimiter"] = { fg = config.minimal and theme.syn.operator or theme.syn.punct },
         -- @punctuation.bracket    brackets (e.g. `()`, `{}`, `[]`)
-        ["@punctuation.bracket"] = { fg = theme.syn.punct },
+        ["@punctuation.bracket"] = { fg = config.minimal and theme.syn.operator or theme.syn.punct },
         -- @punctuation.special    special symbols (e.g. `{}` in string interpolation)
-        ["@punctuation.special"] = { fg = theme.syn.special1 },
+        ["@punctuation.special"] = { fg = config.minimal and theme.syn.operator or theme.syn.special1 },
         --
         -- @comment                line and block comments
         -- @comment.documentation  comments documenting code

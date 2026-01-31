@@ -31,6 +31,7 @@
 - ⚡ Compilation to lua byte code for fast startup times
 - 🎨 Four beautiful theme variants to match your mood and environment
 - 🔆 Saturated mode for enhanced syntax highlighting visibility
+- 🎯 Minimal mode for a reduced color palette
 - 👁️ WCAG 2.1 AA compliant
 
 ## 📦 Installation
@@ -99,6 +100,7 @@ require('kanso').setup({
         light = "pearl"         -- try "zen", "mist" or "ink" !
     },
     foreground = "default",      -- "default" or "saturated" (can also be a table like background)
+    minimal = false,             -- reduced color palette for a more minimal look
 })
 
 -- setup must be called before loading
@@ -208,6 +210,43 @@ This is particularly useful:
 - When using the light themes where increased saturation can be beneficial
 
 The saturation adjustment only affects syntax highlighting colors (strings, keywords, functions, etc.) and does not change UI elements or background colors.
+
+</details>
+
+## 🎯 Minimal Mode
+
+Kansō supports a minimal mode that reduces the color palette for a cleaner, more focused coding experience. This mode uses fewer distinct colors while maintaining readability and visual hierarchy.
+
+<details>
+<summary><strong>🔳 Using Minimal Mode</strong></summary>
+
+Enable minimal mode in your configuration:
+
+```lua
+require('kanso').setup({
+    minimal = true,
+})
+```
+
+When enabled, the color scheme changes to:
+
+| Element | Color |
+|---------|-------|
+| Variables, Constants | White (foreground) |
+| Parameters | Gray |
+| Functions, Methods | Blue |
+| Types | Aqua |
+| Keywords, Statements | Gray |
+| Operators (`=`, `+`, `*`, etc.) | Yellow |
+| Brackets, Punctuation | Gray |
+| Properties, Members | Violet |
+| Strings | Green |
+| Numbers | Pink |
+
+This mode is ideal for:
+- Reducing visual noise while coding
+- Users who prefer a more monochromatic aesthetic
+- Minimizing distractions during focused work sessions
 
 </details>
 

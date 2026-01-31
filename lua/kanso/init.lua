@@ -11,6 +11,7 @@ M.config = {
     bold = true,
     italics = true,
     undercurl = true,
+    minimal = false,
     commentStyle = { italic = true },
     functionStyle = {},
     keywordStyle = { italic = true },
@@ -47,6 +48,11 @@ function M.setup(config)
         M.config = vim.tbl_deep_extend("force", M.config, config or {})
     else
         vim.notify("Kanso: Errors found while loading user config. Using default config.", vim.log.levels.ERROR)
+    end
+
+    -- Reload colorscheme if already active to apply new config
+    if vim.g.colors_name == "kanso" then
+        M.load(M._EXPLICIT_THEME)
     end
 end
 

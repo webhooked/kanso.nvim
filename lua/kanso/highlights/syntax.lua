@@ -12,7 +12,7 @@ function M.setup(colors, config)
         Comment = vim.tbl_extend("force", { fg = theme.syn.comment }, not config.italics and {} or config.commentStyle),
 
         -- *Constant	any constant
-        Constant = { fg = theme.syn.constant },
+        Constant = { fg = config.minimal and theme.ui.fg or theme.syn.constant },
         --  String		a string constant: "this is a string"
         String = { fg = theme.syn.string },
         --  Character	a character constant: 'c', '\n'
@@ -20,29 +20,29 @@ function M.setup(colors, config)
         --  Number		a number constant: 234, 0xff
         Number = { fg = theme.syn.number },
         --  Boolean	a boolean constant: TRUE, false
-        Boolean = { fg = theme.syn.constant },
+        Boolean = { fg = config.minimal and theme.ui.fg or theme.syn.constant },
         --  Float		a floating point constant: 2.3e10
         Float = { link = "Number" },
 
         -- *Identifier	any variable name
-        Identifier = { fg = theme.syn.identifier },
+        Identifier = { fg = config.minimal and theme.ui.fg or theme.syn.identifier },
         --  Function	function name (also: methods for classes)
         Function = vim.tbl_extend("force", { fg = theme.syn.fun }, config.functionStyle),
 
         -- *Statement	any statement
-        Statement = vim.tbl_extend("force", { fg = theme.syn.statement }, config.statementStyle),
+        Statement = vim.tbl_extend("force", { fg = config.minimal and theme.syn.operator or theme.syn.statement }, config.statementStyle),
         --  Conditional	if, then, else, endif, switch, etc.
         --  Repeat		for, do, while, etc.
         --  Label		case, default, etc.
         --  Operator	"sizeof", "+", "*", etc.
-        Operator = { fg = theme.syn.operator },
+        Operator = { fg = config.minimal and theme.syn.special1 or theme.syn.operator },
         --  Keyword	any other keyword
-        Keyword = vim.tbl_extend("force", { fg = theme.syn.keyword }, not config.italics and {} or config.keywordStyle),
+        Keyword = vim.tbl_extend("force", { fg = config.minimal and theme.syn.operator or theme.syn.keyword }, not config.italics and {} or config.keywordStyle),
         --  Exception	try, catch, throw
         Exception = { fg = theme.syn.special2 },
 
         -- *PreProc	generic Preprocessor
-        PreProc = { fg = theme.syn.preproc },
+        PreProc = { fg = config.minimal and theme.syn.operator or theme.syn.preproc },
         --  Include	preprocessor #include
         --  Define		preprocessor #define
         --  Macro		same as Define
@@ -59,7 +59,7 @@ function M.setup(colors, config)
         --  SpecialChar	special character in a constant
         --  Tag		you can use CTRL-] on this
         --  Delimiter	character that needs attention
-        Delimiter = { fg = theme.syn.punct },
+        Delimiter = { fg = config.minimal and theme.syn.operator or theme.syn.punct },
         --  SpecialComment	special things inside a comment
         --  Debug		debugging statements
 
